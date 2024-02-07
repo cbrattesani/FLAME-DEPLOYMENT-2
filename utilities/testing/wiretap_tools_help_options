@@ -1,0 +1,537 @@
+#!/bin/bash
+
+# Path to the wiretap tools
+path_to_tools="/opt/Autodesk/wiretap/tools/current/"
+
+# List of tool names
+tools=(
+  wiretap_can_create_node
+  wiretap_client_tool
+  wiretap_create_audio
+  wiretap_create_clip
+  wiretap_create_node
+  wiretap_destroy_node
+  wiretap_dump_translations
+  wiretap_duplicate_node
+  wiretap_event_listener
+  wiretap_get_available_metadata
+  wiretap_get_children
+  wiretap_get_clip_format
+  wiretap_get_display_name
+  wiretap_get_frames
+  wiretap_get_metadata
+  wiretap_get_node_type
+  wiretap_get_num_frames
+  wiretap_get_parent_node
+  wiretap_get_root_node
+  wiretap_get_storage_id
+  wiretap_ip_resolver
+  wiretap_is_clip
+  wiretap_is_metadata_available
+  wiretap_multicast_listener
+  wiretap_network_tool
+  wiretap_ping
+  wiretap_print_tree
+  wiretap_read_stream
+  wiretap_remove_server
+  wiretap_rename_node
+  wiretap_resolve_path
+  wiretap_resolve_storage_id
+  wiretap_rw_file
+  wiretap_rw_frame
+  wiretap_server_dump
+  wiretap_set_metadata
+  wiretap_set_num_frames
+  wiretap_set_syncolor_path
+  wiretap_submit_bb_job
+  wiretap_transfer_perf
+  wiretap_translate_path
+)
+
+# Print the list of tools
+the_tool_list=("${tools[@]}")
+
+# Print the list
+echo "the_tool_list=(${the_tool_list[@]})"
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_can_create_node:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_can_create_node
+#         -n <parent node ID>
+#         -t <server-specific node type string (default = NODE)>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_client_tool:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_client_tool
+#         [-h <hostname>|-S <storage Id>]
+#         [-d <destination server hostname>]
+#         [-c <src clip node id to copy>]
+#         [-p <parent node id of clip node to create>]
+#         [-s <perform a soft copy, if possible>]
+#         [-k <keep destination node (i.e. don't destroy)>]
+#         [-N <name of new clip>]
+#         [-t <server specific type of new clip> (default = CLIP)]
+#         [-n <num frames in src clip node>]
+#         [-r <num read-ahead frames (default=-1; use default read-ahead strategy)>]
+#         [-P <parameters xml file>]
+#         [-o <dst frame output file>]
+#         [-L <frame latencies output file>]
+#         [-m <clip metadata tag for new clip node>]
+#         [-M <clip metadata for new clip node>]
+#         [-C Stay connected until cancel ( ctrl+c )]
+#         [-l Loops until cancel ( ctrl+c )]
+#         [-T <timeout> Ping timeout in milliseconds (30000)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_create_audio:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_create_audio
+#         -n <parent clip node ID>
+#         -N <number of samples to create> (default = 48000)
+#         -p <FULL path to audio media file>
+#         -t <server-specific node type> (default = 'AUDIOSTREAM')
+#         -d <display name> (default = track)
+#         -c <num channels> (default = 1)
+#         -r <sample rate> (default = 48000)
+#         -b <bits per sample> (default = 16)
+#         -f <format tag: wav, aiff, dlaudio_int16> (default = dlaudio_int16)
+#         -m <metadata tag>
+#         -M <metadata filename>
+#         -h <host name or IP address> (default = 127.0.0.1 )
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_create_clip:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_create_clip
+#         -n <parent node ID>
+#         -N <number of frames to create> (default = 1)
+#         -l <directory of media files to which to link>
+#         -l <file of FULL paths to image files (newline separated)>
+#         -t <server-specific node type> (default = 'CLIP')
+#         -d <display name> (default = node)
+#         -x <frame width> (default = 720)
+#         -y <frame height> (default = 486)
+#         -c <num channels> (default = 3)
+#         -r <frame rate> (default = 30)
+#         -b <bits per pixel: 24, 30, 48, etc> (default = 24)
+#         -f <format tag: rgb_le, rgb_float_le, dpx, sgi, etc> (default = rgb)
+#         -s <scan format: field1_odd, field2_odd, field1_even, field2_even, progressive>
+#         -p <pixel ratio>
+#         -m <metadata tag>
+#         -M <metadata filename>
+#         -h <host name or IP address> (default = 127.0.0.1)
+#         -C <colour space (default = none)
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_create_node:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_create_node
+#         -n <parent node ID>
+#         -t <server-specific node type string (default = NODE)>
+#         -d <display name>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+#         [-s <metadata stream name> (default = none]
+#         [-f <file containing metadata> (default = none)]
+#         [-g <effective group>] (assumes super-user privileges)
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_destroy_node:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_destroy_node
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+#       Unable to show path translations on 'delta': No route to host.
+# # -------------------------------------------------------------------------- #
+
+# wiretap_duplicate_node:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_duplicate_node
+#         -n <parent node Id>
+#         -s <source node Id>
+#         -d <display name of duplicate node>>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_event_listener:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_event_listener
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+#         [-d <dump serialized event details>
+#         [-s <metadata stream name> (default = none]
+#         [-f <file containing metadata> (default = none)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_get_available_metadata:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_get_available_metadata
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_get_children:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_get_children
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+#         [-N ] show display names (default = show node IDs)
+#         [-d <delimiter character> (default = none)]
+#         [-s <separator character> (default = newline)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_get_clip_format:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_get_clip_format
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_get_display_name:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_get_display_name
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_get_frames:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_get_frames
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+#         [-d <delimiter character> (default = none)]
+#         [-s <separator character> (default = newline)]
+#         [-p <print frame file paths>]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_get_metadata:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_get_metadata
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+#         -s <metadata stream name>
+#         [-f <metadata filter>]
+#         [-d <depth> (default = 1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_get_node_type:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_get_node_type
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_get_num_frames:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_get_num_frames
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_get_parent_node:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_get_parent_node
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_get_root_node:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_get_root_node
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_get_storage_id:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_get_storage_id
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_ip_resolver:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_ip_resolver
+#         -H <IP address>
+#         -S <Storage ID>
+#         -l <loop>
+#         -h this message
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_is_clip:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_is_clip
+#         -n <node ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_is_metadata_available:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_is_metadata_available
+#         -n <node ID>
+#         -s <stream ID>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_multicast_listener:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_multicast_listener
+#         [-d <dump event details>
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_network_tool:
+
+#       Use self discovery to identify and contact all Wiretap servers
+#       on the network. User can forcely remove dead servers from the
+#       list
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_network_tool
+#       -g <gateway IP>  : Multicast/Unicast target ( default = broadcast )
+#       -h               : Display help
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_ping:
+
+#     Usage: wiretap_ping [-h <host/port/database>] [-s <storage ID>] [-t <timeout ms>]
+
+#       Options
+
+#         -h <host name|IP address>[:[<port>|<database>]] (default:127.0.0.1)
+#           IP address: IPv4 address in the form of ###.###.###.###
+#           Host name:  Any network resolvable host name.
+#                       If 'ping hostname' does not work, wiretap_ping won't work either.
+#           Port:       TCP node port of the service.
+#           Database:   WireTap Database type (IFFFS, Backburner, Gateway).
+
+#         -s <storage ID>
+#           The storage ID is a persistent identifier that can be used to find a
+#           specific server instance on a specific machine, and is guaranteed to
+#           be constant no matter the network configuration.
+
+#         -t <timeout in ms> (default: 30000)
+
+#       Examples
+
+#       Ping local host IFFFS wiretap server
+
+#     wiretap_ping -h locahost:IFFFS
+
+#         * Will rely on self-discovery since database type is specified.
+
+#       Ping local host Backburner Manager directly
+
+#     wiretap_ping -h locahost:7347
+
+#         * Will not rely on self-discovery since port is specified.
+
+#       Ping remote Wiretap Gateway server
+
+#     wiretap_ping -h myhost.my.domain.com:Gateway
+
+#         * Will rely on self-discovery since database type is specified.
+
+#       Ping using storage ID
+
+#     wiretap_ping -s IFFFS-123
+
+#         * Will rely on self-discovery since storage ID is specified.
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_print_tree:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_print_tree
+#         [-h <host name or IP address>]
+#         [-s <metadata stream name>] show metadata stream specified
+#         [-n <node id> start from node Id ]
+#         [-d <depth> maximum depth to descend (default = 2) ]
+#         [-v verbose ]
+#         [-k keep going on error ]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_read_stream:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_read_stream
+#         -s <stream id>
+#         -o <item offset from beginning of stream> (default 0)
+#         -f <output stream file path> (default = ./stream.raw>
+#         -c <chunk size in bytes> (default 256kB)
+#         -b <item size in bytes> (default 4 bytes)
+#         -n <number of items> 
+#         -v verbose time display for each read operation
+#         -h <host name or IP address> (default = 127.0.0.1)
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_remove_server:
+
+#       Broadcast a remove server multicast message alike what servers do
+#       when shutting down. This can be used to remove lingering dead servers.
+
+#       If the server is still alive, it will broadcast notification to
+#       add itself back on lists.
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_remove_server
+#         -i <IP address>
+#         -d <database/server type>
+#         -h this message
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_rename_node:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_rename_node
+#         -n <node ID>
+#         -d <new display name>
+#       [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_resolve_path:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_resolve_path
+#         [-h <hostName>]
+#         [-p <path>]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_resolve_storage_id:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_resolve_storage_id
+#         -s <Storage ID>
+#       [-N ] show display name (default = show IP:DB)
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_rw_file:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_rw_file
+#         -l <local file path>
+#         -s <stream id>
+#         -w write to server (default = read from server)
+#         -h <host name or IP address> (default = 127.0.0.1)
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_rw_frame:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_rw_frame
+#         -n <clip node id>[,clip node id][,...]
+#         -f <frame file (default = ./frame_#.format>
+#         -s skip file IO (default = false)
+#         -i <zero-based frame index, -1 for all frames> (default = 0)
+#         -w write frame (default = read)
+#         -h <host name or IP address> (default = localhost)
+#         -r disable read ahead (default = enabled)
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_server_dump:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_server_dump 
+#         [-v] display protocol version
+#         [-p] display Ports
+#         [-U] display host UUIDs
+#         [-F] display full server information.
+#         [-t <time in sec> Time to wait for replies (default = 0s)
+#         |-g <server IP>[:<port>]] Use specific server
+#         [-d <database filter>] default = none
+# # -------------------------------------------------------------------------- #
+
+# wiretap_set_metadata:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_set_metadata
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+#         -n <node ID>
+#         -s <metadata stream name>
+#         -f <metadata filename>
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_set_num_frames:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_set_num_frames
+#         -n <clip node ID>
+#         -N <num frames>
+#         [-h <host name or IP address> (default = 127.0.0.1)]
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_set_syncolor_path:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_set_syncolor_path 
+#         [-p <path> SynColor shared transform path]
+#         [-h "<hosts>" list of hosts on which to apply path (comma or space separated)]
+#         [-a <all> apply to all servers (default=false)]
+#         [-t <time in sec> Time to wait for replies (default = 0s)]
+#         |-g <server IP>[:<port>]] Use specific server as network gateway]
+# # -------------------------------------------------------------------------- #
+
+# wiretap_submit_bb_job:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_submit_bb_job
+#         -h <host name or IP address> (default = 127.0.0.1)
+#         -n <job name>
+#         -d <job description>
+#         -t <number of tasks in job (default=0)>
+#         -s <comma-separated list of servers>
+#         -P <renderer/plugin name>
+#         [ -D <job details data file> ]
+#         [ -x (inline XML job details) ]
+#         [ -p <job priority (default = 0 (critical))>
+#         [ -a <attachment filename>
+
+# # -------------------------------------------------------------------------- #
+
+# wiretap_transfer_perf:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_transfer_perf
+#         -p src volume (default = /stonefs)
+#         -P dst volume (default = /stonefs)
+#         -f <number of frames to create> (default = 100)
+#         -x <frame width> (default = 720)
+#         -y <frame height> (default = 486)
+#         -b <bits per pixel: 24, 30, 48, etc> (default = 24)
+#         -h <src host name or IP address> (default = 127.0.0.1)
+#         -H <dst host name or IP address> (default = 127.0.0.1)
+#         -v <verbose>
+
+# # -------------------------------------------------------------------------- #
+
+# # wiretap_translate_path:
+
+#     Usage: /opt/Autodesk/wiretap/tools/current//wiretap_translate_path
+#         [-h <host name or IP of Wiretap server> (default = 127.0.0.1)]
+#         [-p <path on Wiretap server host to translate>]
+#         [-f <file containing paths on remote host to translate to 
+#             path on the local host, delimited by new lines>]
+#         [-H <destination host name> (default = 127.0.0.1)]
+#         [-O <destination operating system> (Irix,Linux,WindowsNT,MacOSX)]
+
+#         Either -p or -f must be specified, but not both.

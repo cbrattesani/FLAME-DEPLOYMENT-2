@@ -1,0 +1,83 @@
+{
+    "DlBookmark": {
+        "Version": 1,
+        "Sections": [
+            {
+                "Section": "Project",
+                "Bookmarks": [
+                    {
+                        "Bookmark": "project home - local",
+                        "Path": "<project home>",
+                        "Visibility": "Global"
+                    },
+                    {
+                        "Bookmark": "JOBS",
+                        "Path": "/JOBS/",
+                        "Visibility": "Global"
+                    },
+                    {
+                        "Bookmark": "job home",
+                        "Path": "/JOBS/PROJECT_NAME/",
+                        "Visibility": "Global"
+                    },
+                    {
+                        "Folder": "job directories",
+                        "Bookmarks": [
+                            {
+                                "Bookmark": "assets",
+                                "Path": "/JOBS/PROJECT_NAME/assets/",
+                                "Visibility": "MediaHub Files"
+                            },
+                            {
+                                "Bookmark": "reference",
+                                "Path": "/JOBS/PROJECT_NAME/reference/",
+                                "Visibility": "MediaHub Files"
+                            },
+                            {
+                                "Bookmark": "shots",
+                                "Path": "/JOBS/PROJECT_NAME/shots/",
+                                "Visibility": "MediaHub Files"
+                            },
+                            {
+                                "Bookmark": "editorial",
+                                "Path": "/JOBS/PROJECT_NAME/editorial/",
+                                "Visibility": "MediaHub Files"
+                            },
+                            {
+                                "Bookmark": "work in progress",
+                                "Path": "/JOBS/PROJECT_NAME/deliverables/wip/",
+                                "Visibility": "MediaHub Files"
+                            },
+                            {
+                                "Bookmark": "finals",
+                                "Path": "/JOBS/PROJECT_NAME/deliverables/finals/",
+                                "Visibility": "MediaHub Files"
+                            },
+                            {
+                                "Bookmark": "flame_colortoolkit",
+                                "Path": "/opt/Autodesk/Synergy/SynColor/Shared/transforms/flame_colortoolkit",
+                                "Visibility": "MediaHub Files"
+                            },
+                            {
+                                "Bookmark": "flame_setups",
+                                "Path": "/JOBS/PROJECT_NAME/flame_setups/",
+                                "Visibility": "Setups"
+                            },
+                            {
+                                "Bookmark": "flame_archives",
+                                "Path": "/JOBS/PROJECT_NAME/flame_archives/",
+                                "Visibility": "MediaHub Archives"
+                            },
+                            {
+                                "Bookmark": "PROJECT_NAME_BOOKMARK",
+                                "Path": "PROJECT_PATH_BOOKMARK",
+                                "PrivateData": "PROJECT_PRIVATEDATA_BOOKMARK",
+                                "Visibility": "MediaHub Projects"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

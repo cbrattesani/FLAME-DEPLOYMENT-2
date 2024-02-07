@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ssh-keyscan -p 22 -T 5 -f remote_hosts_2451_vlan > known_hosts_2451_vlan

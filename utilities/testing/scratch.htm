@@ -1,0 +1,167 @@
+Project Node Metadata (XML)
+
+Project nodes have XML metadata associated with them.
+You can gain access to it using the getMetaData and setMetaData methods on the WireTapNodeHandle object for the project node.
+
+Valid Values for Project Metadata
+
+The following table shows valid values for each element in a project XML stream.
+Some elements are read-only.
+Values are returned by the IFFFS Wiretap server when you call getMetaData on the WireTapNodeHandle object for the project node.
+
+Element                        Type      Valid Range/Values            Comments
+
+<Project>                      complex	 	                           Contains all other elements.
+                                                                       Required.
+<Name>                         string    Read-only, optional
+<Nickname>                     string    Read-only, optional
+<Description>                  string    No length restrictions        Optional
+<CreationDate>                 string    Read-only, optional
+<SetupDir>                     string    No length restrictions        Optional
+                                                                       IFFFS Wiretap server returns the full path
+<Partition>                    string                                  Read-only, optional
+<Version>                      integer                                 Read-only, optional
+<FrameWidth>                   integer   24 to 8192                    Optional
+<FrameHeight>                  integer   24 to 8192                    Optional
+<FrameDepth>                   string     8-bit                        Optional
+                                         10-bit                        The u in 12-bit u means unpacked.
+                                         12-bit                        fp stands for floating point.
+                                         12-bit u
+                                         16-bit fp
+<AspectRatio>                  decimal	 0.001 to 100.0                Optional
+<FieldDominance>               string	 FIELD_1                       (case-sensitive)
+                                         FIELD_2                       Optional
+                                         PROGRESSIVE
+
+
+<ProxyWidth>                   integer   Width of the proxies. Calculated: <FrameWidth> x <ProxyWidthHint>.	Read-only.
+<ProxyWidthHint>               float	Used to compute the size of proxies. Must be one of the following:
+                                                                       0.5
+                                                                       0.25
+                                                                       0.125
+                                                                       Optional
+<ProxyMinFrameSize>            integer	The threshold height over which proxies are generated when importing from MediaHub.
+24 to 8192. Must be an integer multiple of 4.
+Optional
+<ProxyAbove8bits>              string	true/false (case-sensitive)	Optional
+<ProxyQuality>                 string	
+Lanczos
+Shannon
+Gaussian
+Quadratic
+Bicubic
+Mitchell
+Triangle
+Impulse
+Draft
+(case-sensitive)
+
+Optional
+<ProxyRegenState>              integer	 	Read-only, optional
+<ProxyDepthMode>               string	8-bit
+SAME_AS_HIRES
+
+8-BITS (deprecated)
+
+Optional
+<ProxyDepth>                   string	8-bit
+10-bit
+
+12-bit
+
+12-bit u
+
+16-bit fp
+
+Optional
+The u in 12-bit u means unpacked. fp stands for floating point.
+
+<BatchShaderPath>              string	Path to the default Matchbox shaders	Optional
+<ActionLightOperatorPath>      string	Path to the default Lightbox shaders	Optional
+<ActionShaderPath>             string	Path to the default Matchbox for Action shaders	Optional
+<InputColourSpaceRulesFile>    string	Path to the input colour space rules file	Optional
+<VisualDepth>	string	8-bit
+12-bit
+
+unknown
+
+8bits (deprecated)
+
+12bits (deprecated)
+
+(case-sensitive)
+
+Optional
+<ProcessMode>	integer	Rendering engine used. 1 for Flame Reactor.
+0 for Classic Engine (deprecated)
+
+Optional
+<IntermediatesProfile>	integer	Dictionary key defining the intermediate format used for caching. See the table below.	Optional
+<FrameRate>	string	Default frame rate for menus that require a frame rate.	Optional
+Note: Proxies are no longer enabled by the project, but by each clip individually. There is no public method to generate proxies.
+Supported Values
+
+Compressed Intermediates	<IntermediatesProfile> Value
+Uncompressed / RAW	0
+Uncompressed	2
+Packed / RAW	4
+Packed	3
+Legacy Configuration (deprecated)	1
+DNx Compressed Intermediates (Linux-only)
+DNxHR/DNxHD 444 / RAW	512
+DNxHR/DNxHD HQ / RAW	513
+DNxHR/DNxHD SQ / RAW	514
+DNxHR/DNxHD LB / RAW	515
+DNxHR/DNxHD 444	640
+DNxHR/DNxHD HQ	641
+DNxHR/DNxHD SQ	642
+DNxHR/DNxHD LB	643
+QuickTime ProRes (Linux and Mac)
+Apple ProRes 422 Proxy	65536
+Apple ProRes 422 LT	65537
+Apple ProRes 422	65538
+Apple ProRes 422 HQ	65539
+Apple ProRes 4444	65540
+Apple ProRes 4444 XQ	65541
+Apple ProRes 422 Proxy / RAW	65792
+Apple ProRes 422 LT / RAW	65793
+Apple ProRes 422 / RAW	65794
+Apple ProRes 422 HQ / RAW	65795
+Apple ProRes 4444 / RAW	65796
+Apple ProRes 4444 XQ / RAW	65797
+Note: DNx-type compressed intermediates are not supported for projects opened on Mac OS X. Use QuickTime ProRes instead.
+
+
+
+
+
+<Project>                   
+    <Name>                      
+    <Nickname>                  
+    <Description>               
+    <CreationDate>              
+    <SetupDir>                  
+    <Partition>                 
+    <Version>                   
+    <FrameWidth>                
+    <FrameHeight>               
+    <FrameDepth>                
+    <AspectRatio>               
+    <FieldDominance>            
+    <ProxyWidth>                
+    <ProxyWidthHint>            
+    <ProxyMinFrameSize>         
+    <ProxyAbove8bits>           
+    <ProxyQuality>              
+    <ProxyRegenState>           
+    <ProxyDepthMode>            
+    <ProxyDepth>                
+    <BatchShaderPath>           
+    <ActionLightOperatorPath>   
+    <ActionShaderPath>          
+    <InputColourSpaceRulesFile> 
+    <VisualDepth>
+    <ProcessMode>
+    <IntermediatesProfile>
+    <FrameRate>
+    <IntermediatesProfile>

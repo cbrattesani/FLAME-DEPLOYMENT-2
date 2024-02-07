@@ -1,0 +1,1780 @@
+---- [Tab created 02/06/2024 06:01:19 AM] ----
+
+[02/06/2024 06:01:27 AM]
+>>> import flame
+>>> 
+>>> def list_properties(obj):
+>>>     print(f"Properties of {obj.__name__}:")
+>>>     for attr_name in dir(obj):
+>>>         if not attr_name.startswith("__"):
+>>>             attr_value = getattr(obj, attr_name)
+>>>             print(f"- {attr_name}: {attr_value}")
+>>> 
+>>> # List properties of classes
+>>> for class_name in dir(flame):
+>>>     class_obj = getattr(flame, class_name)
+>>>     if isinstance(class_obj, type):
+>>>         list_properties(class_obj)
+>>> 
+>>> # List properties of functions
+>>> for func_name in dir(flame):
+>>>     func_obj = getattr(flame, func_name)
+>>>     if callable(func_obj):
+>>>         list_properties(func_obj)
+
+Properties of PyActionFamilyNode:
+- all_tabs: <property object at 0x7f4ab173a070>
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_schematic: <Boost.Python.function object at 0x168d3950>
+- connect_nodes: <Boost.Python.function object at 0x168d37e0>
+- create_node: <Boost.Python.function object at 0x168d3670>
+- cursor_position: <property object at 0x7f4ab173a020>
+- delete: <Boost.Python.function object at 0x16948b70>
+- disconnect_nodes: <Boost.Python.function object at 0x168d3860>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- encompass_nodes: <Boost.Python.function object at 0x168d39d0>
+- get_node: <Boost.Python.function object at 0x168d3760>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- left_tabs: <property object at 0x7f4ab173a0c0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- media_layers: <property object at 0x7f4ab173a2a0>
+- node_types: <property object at 0x7f4ab1739f80>
+- nodes: <property object at 0x7f4ab1739fd0>
+- organize: <Boost.Python.function object at 0x168d36f0>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- right_tabs: <property object at 0x7f4ab173a110>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyActionNode:
+- add_media: <Boost.Python.function object at 0x16a41b20>
+- all_tabs: <property object at 0x7f4ab173a070>
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_schematic: <Boost.Python.function object at 0x168d3950>
+- connect_nodes: <Boost.Python.function object at 0x168d37e0>
+- create_node: <Boost.Python.function object at 0x168d3670>
+- cursor_position: <property object at 0x7f4ab173a020>
+- delete: <Boost.Python.function object at 0x16948b70>
+- disable_output: <Boost.Python.function object at 0x16a41ea0>
+- disconnect_nodes: <Boost.Python.function object at 0x168d3860>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- enable_output: <Boost.Python.function object at 0x16a41e20>
+- encompass_nodes: <Boost.Python.function object at 0x168d39d0>
+- export_fbx: <Boost.Python.function object at 0x16a41c20>
+- get_node: <Boost.Python.function object at 0x168d3760>
+- import_abc: <Boost.Python.function object at 0x16a41d20>
+- import_fbx: <Boost.Python.function object at 0x16a41ba0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- left_tabs: <property object at 0x7f4ab173a0c0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- media_layers: <property object at 0x7f4ab173a2a0>
+- media_nodes: <property object at 0x7f4ab173a7f0>
+- node_types: <property object at 0x7f4ab1739f80>
+- nodes: <property object at 0x7f4ab1739fd0>
+- organize: <Boost.Python.function object at 0x168d36f0>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- output_types: <property object at 0x7f4ab173ab60>
+- parent: <property object at 0x7f4ab1738ea0>
+- read_abc: <Boost.Python.function object at 0x16a41da0>
+- read_fbx: <Boost.Python.function object at 0x16a41ca0>
+- right_tabs: <property object at 0x7f4ab173a110>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyArchiveEntry:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+Properties of PyAttribute:
+- get_value: <Boost.Python.function object at 0x16a58730>
+- set_value: <Boost.Python.function object at 0x16a586e0>
+- values: <property object at 0x7f4ab1738fe0>
+Properties of PyAudioTrack:
+- attributes: <property object at 0x7f4ab1738e50>
+- channels: <property object at 0x7f4ab1775670>
+- copy_to_media_panel: <Boost.Python.function object at 0x16a90650>
+- parent: <property object at 0x7f4ab1738ea0>
+- stereo: <property object at 0x7f4ab17756c0>
+Properties of PyBatch:
+- append_setup: <Boost.Python.function object at 0x169045f0>
+- append_to_batch: <Boost.Python.function object at 0x16904af0>
+- append_to_setup: <Boost.Python.function object at 0x16904a70>
+- attributes: <property object at 0x7f4ab1738e50>
+- batch_iterations: <property object at 0x7f4ab17395d0>
+- clear: <Boost.Python.function object at 0x16904970>
+- clear_all_contexts: <Boost.Python.function object at 0x16935040>
+- clear_context: <Boost.Python.function object at 0x16903450>
+- clear_setup: <Boost.Python.function object at 0x167c0850>
+- close: <Boost.Python.function object at 0x169048f0>
+- connect_nodes: <Boost.Python.function object at 0x169032d0>
+- contexts: <property object at 0x7f4ab1739710>
+- create_batch_group: <Boost.Python.function object at 0x169046f0>
+- create_node: <Boost.Python.function object at 0x16903250>
+- create_reel: <Boost.Python.function object at 0x16904c70>
+- create_shelf_reel: <Boost.Python.function object at 0x16904cf0>
+- current_iteration: <property object at 0x7f4ab1739670>
+- current_iteration_number: <property object at 0x7f4ab1739800>
+- cursor_position: <property object at 0x7f4ab1739760>
+- disconnect_node: <Boost.Python.function object at 0x16903350>
+- encompass_nodes: <Boost.Python.function object at 0x16904770>
+- frame_all: <Boost.Python.function object at 0x169043f0>
+- frame_selected: <Boost.Python.function object at 0x16904370>
+- get_node: <Boost.Python.function object at 0x169031d0>
+- go_to: <Boost.Python.function object at 0x16904d70>
+- import_clip: <Boost.Python.function object at 0x16904470>
+- import_clips: <Boost.Python.function object at 0x169044f0>
+- iterate: <Boost.Python.function object at 0x167c08a0>
+- load_setup: <Boost.Python.function object at 0x167c64a0>
+- mimic_link: <Boost.Python.function object at 0x169033d0>
+- node_types: <property object at 0x7f4ab17394e0>
+- nodes: <property object at 0x7f4ab1739490>
+- open: <Boost.Python.function object at 0x16904870>
+- open_as_batch_group: <Boost.Python.function object at 0x16904b70>
+- opened: <property object at 0x7f4ab17397b0>
+- organize: <Boost.Python.function object at 0x167c6450>
+- parent: <property object at 0x7f4ab1738ea0>
+- reels: <property object at 0x7f4ab1739530>
+- render: <Boost.Python.function object at 0x16948b20>
+- replace_setup: <Boost.Python.function object at 0x16904bf0>
+- save: <Boost.Python.function object at 0x169049f0>
+- save_current_iteration: <Boost.Python.function object at 0x1699b8c0>
+- save_setup: <Boost.Python.function object at 0x16904570>
+- select_nodes: <Boost.Python.function object at 0x169047f0>
+- set_viewport_layout: <Boost.Python.function object at 0x16904670>
+- shelf_reels: <property object at 0x7f4ab1739580>
+Properties of PyBatchIteration:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- iteration_number: <property object at 0x7f4ab1e60f90>
+- open_as_batch_group: <Boost.Python.function object at 0x168116f0>
+- parent: <property object at 0x7f4ab1738ea0>
+Properties of PyBrowser:
+- bit_depth: <property object at 0x7f4ab1761c10>
+- colour_space: <property object at 0x7f4ab1761da0>
+- frame_ratio: <property object at 0x7f4ab1761c60>
+- height: <property object at 0x7f4ab1761b20>
+- resize_filter: <property object at 0x7f4ab1761ee0>
+- resize_mode: <property object at 0x7f4ab1761e40>
+- resolution: <property object at 0x7f4ab1761f30>
+- scaling_presets_value: <property object at 0x7f4ab1761b70>
+- scan_mode: <property object at 0x7f4ab1761d00>
+- selection: <property object at 0x7f4ab17619e0>
+- sequence_mode: <property object at 0x7f4ab1761a80>
+- show: <Boost.Python.function object at 0x16a3ac50>
+- width: <property object at 0x7f4ab1761ad0>
+Properties of PyClip:
+- archive_date: <property object at 0x7f4ab1753f60>
+- archive_error: <property object at 0x7f4ab1753fb0>
+- attributes: <property object at 0x7f4ab1738e50>
+- audio_tracks: <property object at 0x7f4ab1753740>
+- bit_depth: <property object at 0x7f4ab17539c0>
+- cache_media: <Boost.Python.function object at 0x169706a0>
+- cached: <property object at 0x7f4ab17602c0>
+- change_dominance: <Boost.Python.function object at 0x16970600>
+- change_start_frame: <Boost.Python.function object at 0x16743450>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- close_container: <Boost.Python.function object at 0x16a9dec0>
+- colour_primaries: <property object at 0x7f4ab1753b50>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_marker: <Boost.Python.function object at 0x16a9cd60>
+- creation_date: <property object at 0x7f4ab1753f10>
+- cut: <Boost.Python.function object at 0x1671be70>
+- duration: <property object at 0x7f4ab17536a0>
+- essence_uid: <property object at 0x7f4ab1760090>
+- flush_cache_media: <Boost.Python.function object at 0x16a5e6c0>
+- flush_renders: <Boost.Python.function object at 0x16710a70>
+- frame_rate: <property object at 0x7f4ab1753600>
+- get_colour_space: <Boost.Python.function object at 0x167433c0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- has_deliverables: <property object at 0x7f4ab1753dd0>
+- has_history: <property object at 0x7f4ab1753e70>
+- height: <property object at 0x7f4ab1753920>
+- is_rendered: <Boost.Python.function object at 0x16710ae0>
+- markers: <property object at 0x7f4ab1753790>
+- matrix_coefficients: <property object at 0x7f4ab1753c90>
+- open_as_sequence: <Boost.Python.function object at 0x16a198a0>
+- open_container: <Boost.Python.function object at 0x1680cb80>
+- original_source_uid: <property object at 0x7f4ab1760180>
+- parent: <property object at 0x7f4ab1738ea0>
+- proxy_resolution: <property object at 0x7f4ab1753d30>
+- ratio: <property object at 0x7f4ab1753a60>
+- reformat: <Boost.Python.function object at 0x16a9df60>
+- render: <Boost.Python.function object at 0x167f8a00>
+- sample_rate: <property object at 0x7f4ab1760220>
+- save: <Boost.Python.function object at 0x1671bdf0>
+- scan_mode: <property object at 0x7f4ab1753b00>
+- source_uid: <property object at 0x7f4ab1760130>
+- start_frame: <property object at 0x7f4ab1760360>
+- subtitles: <property object at 0x7f4ab17537e0>
+- transfer_characteristics: <property object at 0x7f4ab1753bf0>
+- unlinked: <property object at 0x7f4ab1753ec0>
+- versions: <property object at 0x7f4ab17536f0>
+- width: <property object at 0x7f4ab1753880>
+Properties of PyClipNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- clip: <property object at 0x7f4ab173ba60>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyCoCameraAnalysis:
+- add_reference: <Boost.Python.function object at 0x16af0b20>
+- analyseRange: <Boost.Python.function object at 0x16a30480>
+- assign_media: <Boost.Python.function object at 0x16af0a80>
+- attributes: <property object at 0x7f4ab1738e50>
+- cache_range: <Boost.Python.function object at 0x16af0ad0>
+- children: <Boost.Python.function object at 0x167f2630>
+- parent: <property object at 0x7f4ab1738ea0>
+- parents: <Boost.Python.function object at 0x167f25e0>
+- resetAnalysis: <Boost.Python.function object at 0x16a30430>
+- type: <property object at 0x7f4ab173a3e0>
+Properties of PyCoCompass:
+- add_reference: <Boost.Python.function object at 0x16af0b20>
+- assign_media: <Boost.Python.function object at 0x16af0a80>
+- attributes: <property object at 0x7f4ab1738e50>
+- cache_range: <Boost.Python.function object at 0x16af0ad0>
+- children: <Boost.Python.function object at 0x167f2630>
+- nodes: <property object at 0x7f4ab173a520>
+- parent: <property object at 0x7f4ab1738ea0>
+- parents: <Boost.Python.function object at 0x167f25e0>
+- type: <property object at 0x7f4ab173a3e0>
+Properties of PyCoNode:
+- add_reference: <Boost.Python.function object at 0x16af0b20>
+- assign_media: <Boost.Python.function object at 0x16af0a80>
+- attributes: <property object at 0x7f4ab1738e50>
+- cache_range: <Boost.Python.function object at 0x16af0ad0>
+- children: <Boost.Python.function object at 0x167f2630>
+- parent: <property object at 0x7f4ab1738ea0>
+- parents: <Boost.Python.function object at 0x167f25e0>
+- type: <property object at 0x7f4ab173a3e0>
+Properties of PyCompassNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- nodes: <property object at 0x7f4ab173b380>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyDesktop:
+- attributes: <property object at 0x7f4ab1738e50>
+- batch_groups: <property object at 0x7f4ab1752570>
+- children: <property object at 0x7f4ab1752520>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_batch_group: <Boost.Python.function object at 0x16a89610>
+- create_reel_group: <Boost.Python.function object at 0x16a89510>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- reel_groups: <property object at 0x7f4ab17525c0>
+- save: <Boost.Python.function object at 0x16a89590>
+Properties of PyExporter:
+- Audio: Audio
+- Autodesk: Autodesk
+- BackgroundJobSettings: <class 'flame.BackgroundJobSettings'>
+- Distribution_Package: Distribution_Package
+- Image_Sequence: Image_Sequence
+- Movie: Movie
+- PresetType: <class 'flame.PresetType'>
+- PresetVisibility: <class 'flame.PresetVisibility'>
+- Project: Project
+- Sequence_Publish: Sequence_Publish
+- Shared: Shared
+- Shotgun: Shotgun
+- User: User
+- export: <Boost.Python.function object at 0x168127a0>
+- export_all_subtitles: <property object at 0x7f4ab1760b30>
+- export_between_marks: <property object at 0x7f4ab1760900>
+- export_subtitles_as_files: <property object at 0x7f4ab1760a90>
+- foreground: <property object at 0x7f4ab17609a0>
+- get_presets_base_dir: <Boost.Python.function object at 0x168126c0>
+- get_presets_dir: <Boost.Python.function object at 0x16812730>
+- include_subtitles: <property object at 0x7f4ab17609f0>
+- keep_timeline_fx_renders: <property object at 0x7f4ab1760f90>
+- use_top_video_track: <property object at 0x7f4ab21fbd80>
+- warn_on_mixed_colour_space: <property object at 0x7f4ab1760e50>
+- warn_on_no_media: <property object at 0x7f4ab1760db0>
+- warn_on_pending_render: <property object at 0x7f4ab1760d10>
+- warn_on_reimport_unsupported: <property object at 0x7f4ab1760ef0>
+- warn_on_unlinked: <property object at 0x7f4ab1760bd0>
+- warn_on_unrendered: <property object at 0x7f4ab1760c70>
+Properties of PyFlameObject:
+- attributes: <property object at 0x7f4ab1738e50>
+- parent: <property object at 0x7f4ab1738ea0>
+Properties of PyFolder:
+- attributes: <property object at 0x7f4ab1738e50>
+- batch_groups: <property object at 0x7f4ab17533d0>
+- batch_iterations: <property object at 0x7f4ab1753240>
+- children: <property object at 0x7f4ab17531f0>
+- clear: <Boost.Python.function object at 0x16829470>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- clips: <property object at 0x7f4ab1753380>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_folder: <Boost.Python.function object at 0x168295f0>
+- create_reel: <Boost.Python.function object at 0x16829570>
+- create_reel_group: <Boost.Python.function object at 0x168294f0>
+- create_sequence: <Boost.Python.function object at 0x16829790>
+- desktops: <property object at 0x7f4ab1753290>
+- folders: <property object at 0x7f4ab21f8e50>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- reel_groups: <property object at 0x7f4ab17532e0>
+- reels: <property object at 0x7f4ab2469170>
+- sequences: <property object at 0x7f4ab1753330>
+Properties of PyGMaskTracerNode:
+- all_tabs: <property object at 0x7f4ab173a070>
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_schematic: <Boost.Python.function object at 0x168d3950>
+- connect_nodes: <Boost.Python.function object at 0x168d37e0>
+- create_node: <Boost.Python.function object at 0x168d3670>
+- cursor_position: <property object at 0x7f4ab173a020>
+- delete: <Boost.Python.function object at 0x16948b70>
+- disable_output: <Boost.Python.function object at 0x16a797c0>
+- disconnect_nodes: <Boost.Python.function object at 0x168d3860>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- enable_output: <Boost.Python.function object at 0x16a79740>
+- encompass_nodes: <Boost.Python.function object at 0x168d39d0>
+- export_fbx: <Boost.Python.function object at 0x16a79540>
+- get_node: <Boost.Python.function object at 0x168d3760>
+- import_abc: <Boost.Python.function object at 0x16a79640>
+- import_fbx: <Boost.Python.function object at 0x16a794c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- left_tabs: <property object at 0x7f4ab173a0c0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- media_layers: <property object at 0x7f4ab173a2a0>
+- node_types: <property object at 0x7f4ab1739f80>
+- nodes: <property object at 0x7f4ab1739fd0>
+- organize: <Boost.Python.function object at 0x168d36f0>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- output_types: <property object at 0x7f4ab219c180>
+- parent: <property object at 0x7f4ab1738ea0>
+- read_abc: <Boost.Python.function object at 0x16a796c0>
+- read_fbx: <Boost.Python.function object at 0x16a795c0>
+- right_tabs: <property object at 0x7f4ab173a110>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyHDRNode:
+- analysis_status: <property object at 0x7f4ab173b600>
+- analyze: <Boost.Python.function object at 0x16992150>
+- attributes: <property object at 0x7f4ab1738e50>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- export_DolbyVision_xml: <Boost.Python.function object at 0x16870290>
+- has_trim: <Boost.Python.function object at 0x1681cb00>
+- import_DolbyVision_xml: <Boost.Python.function object at 0x16870310>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- interpolate_trims: <Boost.Python.function object at 0x168611d0>
+- keep_analysis: <Boost.Python.function object at 0x169c61f0>
+- l2_from_l8: <Boost.Python.function object at 0x1681cb80>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- mastering_display_ids: <property object at 0x7f4ab173b740>
+- mastering_display_info: <property object at 0x7f4ab173b830>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- reset_analysis: <Boost.Python.function object at 0x169c6270>
+- reset_trims: <Boost.Python.function object at 0x16861250>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+- target_display_ids: <property object at 0x7f4ab1a4c6d0>
+- target_display_info: <property object at 0x7f4ab173b8d0>
+Properties of PyHDRTimelineFX:
+- analysis_status: <property object at 0x7f4ab1774c70>
+- analyze: <Boost.Python.function object at 0x16a8e320>
+- attributes: <property object at 0x7f4ab1738e50>
+- export_DolbyVision_xml: <Boost.Python.function object at 0x16a8e5a0>
+- flush_maps_cache_media: <Boost.Python.function object at 0x16a8dae0>
+- has_maps_cache_media: <property object at 0x7f4ab1774a40>
+- has_trim: <Boost.Python.function object at 0x16a8e7e0>
+- import_DolbyVision_xml: <Boost.Python.function object at 0x16a8e620>
+- interpolate_trims: <Boost.Python.function object at 0x16a8e4a0>
+- keep_analysis: <Boost.Python.function object at 0x16a8e3a0>
+- l2_from_l8: <Boost.Python.function object at 0x16a8e860>
+- load_setup: <Boost.Python.function object at 0x16a8d9e0>
+- mastering_display_ids: <property object at 0x7f4ab1774e50>
+- mastering_display_info: <property object at 0x7f4ab1774ef0>
+- parent: <property object at 0x7f4ab1738ea0>
+- reset_analysis: <Boost.Python.function object at 0x16a8e420>
+- reset_trims: <Boost.Python.function object at 0x16a8e520>
+- save_setup: <Boost.Python.function object at 0x16a8da60>
+- slide_keyframes: <Boost.Python.function object at 0x16a8dbe0>
+- sync_connected_segments: <Boost.Python.function object at 0x16a8db60>
+- target_display_ids: <property object at 0x7f4ab1774ea0>
+- target_display_info: <property object at 0x7f4ab1774f40>
+- type: <property object at 0x7f4ab17749f0>
+Properties of PyImageNode:
+- add_media: <Boost.Python.function object at 0x1674fc40>
+- all_tabs: <property object at 0x7f4ab173a070>
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_schematic: <Boost.Python.function object at 0x168d3950>
+- connect_nodes: <Boost.Python.function object at 0x168d37e0>
+- create_node: <Boost.Python.function object at 0x168d3670>
+- cursor_position: <property object at 0x7f4ab173a020>
+- delete: <Boost.Python.function object at 0x16948b70>
+- disconnect_nodes: <Boost.Python.function object at 0x168d3860>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- encompass_nodes: <Boost.Python.function object at 0x168d39d0>
+- get_node: <Boost.Python.function object at 0x168d3760>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- left_tabs: <property object at 0x7f4ab173a0c0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- media_layers: <property object at 0x7f4ab173a2a0>
+- media_nodes: <property object at 0x7f4ab173aca0>
+- node_types: <property object at 0x7f4ab1739f80>
+- nodes: <property object at 0x7f4ab1739fd0>
+- organize: <Boost.Python.function object at 0x168d36f0>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- right_tabs: <property object at 0x7f4ab173a110>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyLibrary:
+- acquire_exclusive_access: <Boost.Python.function object at 0x167b63b0>
+- attributes: <property object at 0x7f4ab1738e50>
+- batch_groups: <property object at 0x7f4ab1752a70>
+- batch_iterations: <property object at 0x7f4ab1752890>
+- children: <property object at 0x7f4ab17527f0>
+- clear: <Boost.Python.function object at 0x168e1340>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- clips: <property object at 0x7f4ab1752a20>
+- close: <Boost.Python.function object at 0x16a33e70>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_folder: <Boost.Python.function object at 0x16821910>
+- create_reel: <Boost.Python.function object at 0x16801a50>
+- create_reel_group: <Boost.Python.function object at 0x168019d0>
+- create_sequence: <Boost.Python.function object at 0x16929b50>
+- desktops: <property object at 0x7f4ab17528e0>
+- folders: <property object at 0x7f4ab1752840>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- open: <Boost.Python.function object at 0x16a33df0>
+- opened: <property object at 0x7f4ab1752ac0>
+- parent: <property object at 0x7f4ab1738ea0>
+- reel_groups: <property object at 0x7f4ab1752930>
+- reels: <property object at 0x7f4ab1752980>
+- release_exclusive_access: <Boost.Python.function object at 0x167b6430>
+- sequences: <property object at 0x7f4ab17529d0>
+Properties of PyMarker:
+- attributes: <property object at 0x7f4ab1738e50>
+- parent: <property object at 0x7f4ab1738ea0>
+Properties of PyMediaHub:
+- archives: <property object at 0x7f4ab1751a30>
+- files: <property object at 0x7f4ab17519e0>
+Properties of PyMediaHubFilesEntry:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- path: <property object at 0x7f4ab1775c10>
+Properties of PyMediaHubFilesFolder:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- path: <property object at 0x7f4ab1775df0>
+Properties of PyMediaHubFilesTab:
+- get_path: <Boost.Python.function object at 0x16a49cf0>
+- options: <property object at 0x7f4ab17511c0>
+- set_path: <Boost.Python.function object at 0x16a49d60>
+Properties of PyMediaHubFilesTabOptions:
+- bit_depth: <property object at 0x7f4ab1751800>
+- cache_and_proxies_all_versions: <property object at 0x7f4ab1751530>
+- cache_mode: <property object at 0x7f4ab1751440>
+- frame_ratio: <property object at 0x7f4ab17517b0>
+- height: <property object at 0x7f4ab19d2430>
+- multi_channel_mode: <property object at 0x7f4ab1751350>
+- pixel_ratio: <property object at 0x7f4ab17518a0>
+- proxies_mode: <property object at 0x7f4ab17514e0>
+- resize_filter: <property object at 0x7f4ab1751620>
+- resize_mode: <property object at 0x7f4ab17515d0>
+- resolution: <property object at 0x7f4ab1751670>
+- scaling_presets_value: <property object at 0x7f4ab1751710>
+- scan_mode: <property object at 0x7f4ab1751850>
+- sequence_mode: <property object at 0x7f4ab17513f0>
+- set_tagged_colour_space: <Boost.Python.function object at 0x1684ea10>
+- width: <property object at 0x7f4ab17516c0>
+Properties of PyMediaHubProjectsEntry:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- path: <property object at 0x7f4ab1776070>
+- uid: <property object at 0x7f4ab1775fd0>
+Properties of PyMediaHubProjectsFolder:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- path: <property object at 0x7f4ab17762f0>
+- uid: <property object at 0x7f4ab1776250>
+Properties of PyMediaHubTab:
+- get_path: <Boost.Python.function object at 0x16a49cf0>
+- set_path: <Boost.Python.function object at 0x16a49d60>
+Properties of PyMediaPanel:
+- copy: <Boost.Python.function object at 0x1684e9c0>
+- dual: <property object at 0x7f4ab17508b0>
+- full_height: <property object at 0x7f4ab1750810>
+- full_width: <property object at 0x7f4ab1750860>
+- move: <Boost.Python.function object at 0x1684e970>
+- selected_entries: <property object at 0x7f4ab1750770>
+- visible: <property object at 0x7f4ab17507c0>
+Properties of PyMessages:
+- clear_console: <Boost.Python.function object at 0x16714430>
+- show_in_console: <Boost.Python.function object at 0x1675f050>
+- show_in_dialog: <Boost.Python.function object at 0x16714480>
+Properties of PyNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyOFXNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- change_plugin: <Boost.Python.function object at 0x16a79e40>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyPaintNode:
+- add_source: <Boost.Python.function object at 0x1674fcb0>
+- attributes: <property object at 0x7f4ab1738e50>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyProject:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_shared_library: <Boost.Python.function object at 0x1676ce60>
+- current_workspace: <property object at 0x7f4ab1751fd0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- name: <property object at 0x7f4ab1751da0>
+- nickname: <property object at 0x7f4ab1751e40>
+- parent: <property object at 0x7f4ab1738ea0>
+- project_name: <property object at 0x7f4ab1751ee0>
+- refresh_shared_libraries: <Boost.Python.function object at 0x16991120>
+- shared_libraries: <property object at 0x7f4ab1752070>
+- workspaces_count: <property object at 0x7f4ab1751f30>
+Properties of PyProjectSelector:
+- current_project: <property object at 0x7f4ab173bf10>
+Properties of PyReel:
+- attributes: <property object at 0x7f4ab1738e50>
+- children: <property object at 0x7f4ab1752f20>
+- clear: <Boost.Python.function object at 0x16965dc0>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- clips: <property object at 0x7f4ab1752fc0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_sequence: <Boost.Python.function object at 0x16929bd0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- save: <Boost.Python.function object at 0x16925c80>
+- sequences: <property object at 0x7f4ab1752f70>
+- type: <property object at 0x7f4ab1753010>
+Properties of PyReelGroup:
+- attributes: <property object at 0x7f4ab1738e50>
+- children: <property object at 0x7f4ab1752d40>
+- clear: <Boost.Python.function object at 0x16965450>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_reel: <Boost.Python.function object at 0x169654d0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- reels: <property object at 0x7f4ab1752d90>
+- save: <Boost.Python.function object at 0x16965550>
+Properties of PyRenderNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- channels: <property object at 0x7f4ab173bba0>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_channel_name: <Boost.Python.function object at 0x167e20e0>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyResolution:
+- bit_depth: <property object at 0x7f4ab1ebaac0>
+- frame_ratio: <property object at 0x7f4ab17392b0>
+- height: <property object at 0x7f4ab1739260>
+- resolution: <property object at 0x7f4ab1739120>
+- scan_mode: <property object at 0x7f4ab1739300>
+- width: <property object at 0x7f4ab17391c0>
+Properties of PySearch:
+- activate_search_result: <Boost.Python.function object at 0x16a49790>
+- search_results: <Boost.Python.function object at 0x16a49720>
+- set_tool_favorite: <Boost.Python.function object at 0x16a495d0>
+- set_tool_hidden: <Boost.Python.function object at 0x16a49640>
+- set_tool_weight: <Boost.Python.function object at 0x16a496b0>
+- use_weight: <property object at 0x7f4ab1750db0>
+Properties of PySegment:
+- attributes: <property object at 0x7f4ab1738e50>
+- change_start_frame: <Boost.Python.function object at 0x167771b0>
+- clear_colour: <Boost.Python.function object at 0x167275c0>
+- connected_segments: <Boost.Python.function object at 0x1675b210>
+- container_clip: <property object at 0x7f4ab1763e70>
+- copy_to_media_panel: <Boost.Python.function object at 0x1675b030>
+- create_connection: <Boost.Python.function object at 0x16996ee0>
+- create_effect: <Boost.Python.function object at 0x1678fd50>
+- create_marker: <Boost.Python.function object at 0x16996e00>
+- create_unlinked_segment: <Boost.Python.function object at 0x167770f0>
+- duplicate_source: <Boost.Python.function object at 0x1675b2d0>
+- effect_types: <property object at 0x7f4ab1763a10>
+- effects: <property object at 0x7f4ab1763a60>
+- file_path: <property object at 0x7f4ab1763970>
+- get_colour_space: <Boost.Python.function object at 0x16726a20>
+- groups: <property object at 0x7f4ab1763ab0>
+- head: <property object at 0x7f4ab1763ba0>
+- markers: <property object at 0x7f4ab17639c0>
+- match: <Boost.Python.function object at 0x16727500>
+- matte_channel: <property object at 0x7f4ab1763c90>
+- matte_channels: <property object at 0x7f4ab1763d30>
+- matte_mode: <property object at 0x7f4ab1763dd0>
+- original_source_uid: <property object at 0x7f4ab185da30>
+- parent: <property object at 0x7f4ab1738ea0>
+- record_duration: <property object at 0x7f4ab17638d0>
+- record_in: <property object at 0x7f4ab1763830>
+- record_out: <property object at 0x7f4ab1763880>
+- remove_connection: <Boost.Python.function object at 0x167bfe80>
+- rgb_channel: <property object at 0x7f4ab1763c40>
+- rgb_channels: <property object at 0x7f4ab1763ce0>
+- set_gap_bars: <Boost.Python.function object at 0x168fca50>
+- set_gap_colour: <Boost.Python.function object at 0x16957d70>
+- set_matte_channel: <Boost.Python.function object at 0x167269a0>
+- set_rgb_channel: <Boost.Python.function object at 0x1673c9c0>
+- shared_source_segments: <Boost.Python.function object at 0x1675af90>
+- slide_keyframes: <Boost.Python.function object at 0x16957cd0>
+- slip: <Boost.Python.function object at 0x16a24d40>
+- smart_replace: <Boost.Python.function object at 0x16816140>
+- smart_replace_media: <Boost.Python.function object at 0x168161d0>
+- source_audio_track: <property object at 0x7f4ab17633d0>
+- source_bit_depth: <property object at 0x7f4ab1762fc0>
+- source_cached: <property object at 0x7f4ab17631f0>
+- source_colour_primaries: <property object at 0x7f4ab1763600>
+- source_duration: <property object at 0x7f4ab1762de0>
+- source_essence_uid: <property object at 0x7f4ab17634c0>
+- source_has_history: <property object at 0x7f4ab1763240>
+- source_height: <property object at 0x7f4ab1762f20>
+- source_in: <property object at 0x7f4ab1762d40>
+- source_matrix_coefficients: <property object at 0x7f4ab1763740>
+- source_name: <property object at 0x7f4ab1762cf0>
+- source_out: <property object at 0x7f4ab1762d90>
+- source_ratio: <property object at 0x7f4ab17630b0>
+- source_sample_rate: <property object at 0x7f4ab1763330>
+- source_scan_mode: <property object at 0x7f4ab1763150>
+- source_transfer_characteristics: <property object at 0x7f4ab17636a0>
+- source_uid: <property object at 0x7f4ab17635b0>
+- source_unlinked: <property object at 0x7f4ab17632e0>
+- source_width: <property object at 0x7f4ab1762e80>
+- start_frame: <property object at 0x7f4ab1763920>
+- sync_connected_segments: <Boost.Python.function object at 0x167bff40>
+- tail: <property object at 0x7f4ab1763bf0>
+- tape_name: <property object at 0x7f4ab17637e0>
+- trim_head: <Boost.Python.function object at 0x16920dd0>
+- trim_tail: <Boost.Python.function object at 0x16a24cb0>
+- type: <property object at 0x7f4ab1763b50>
+Properties of PySequence:
+- archive_date: <property object at 0x7f4ab1753f60>
+- archive_error: <property object at 0x7f4ab1753fb0>
+- attributes: <property object at 0x7f4ab1738e50>
+- audio_tracks: <property object at 0x7f4ab1753740>
+- bit_depth: <property object at 0x7f4ab17539c0>
+- cache_media: <Boost.Python.function object at 0x169706a0>
+- cached: <property object at 0x7f4ab17602c0>
+- change_dominance: <Boost.Python.function object at 0x16970600>
+- change_start_frame: <Boost.Python.function object at 0x16743450>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- close_container: <Boost.Python.function object at 0x16a9dec0>
+- colour_primaries: <property object at 0x7f4ab1753b50>
+- commit: <Boost.Python.function object at 0x16961060>
+- copy_selection_to_media_panel: <Boost.Python.function object at 0x16a4f3c0>
+- create_audio: <Boost.Python.function object at 0x169e8110>
+- create_container: <Boost.Python.function object at 0x16aa8790>
+- create_group: <Boost.Python.function object at 0x157582f0>
+- create_marker: <Boost.Python.function object at 0x16a9cd60>
+- create_subtitle: <Boost.Python.function object at 0x169e81f0>
+- create_version: <Boost.Python.function object at 0x169ede90>
+- creation_date: <property object at 0x7f4ab1753f10>
+- cut: <Boost.Python.function object at 0x1671be70>
+- duration: <property object at 0x7f4ab17536a0>
+- essence_uid: <property object at 0x7f4ab1760090>
+- extract_selection_to_media_panel: <Boost.Python.function object at 0x16a5af90>
+- flush_cache_media: <Boost.Python.function object at 0x16a5e6c0>
+- flush_renders: <Boost.Python.function object at 0x16710a70>
+- frame_rate: <property object at 0x7f4ab1753600>
+- get_colour_space: <Boost.Python.function object at 0x167433c0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- groups: <property object at 0x7f4ab17624d0>
+- has_deliverables: <property object at 0x7f4ab1753dd0>
+- has_history: <property object at 0x7f4ab1753e70>
+- height: <property object at 0x7f4ab1753920>
+- import_subtitles_file: <Boost.Python.function object at 0x15758250>
+- insert: <Boost.Python.function object at 0x16a4b460>
+- is_rendered: <Boost.Python.function object at 0x16710ae0>
+- lift_selection_to_media_panel: <Boost.Python.function object at 0x16831410>
+- markers: <property object at 0x7f4ab1753790>
+- matrix_coefficients: <property object at 0x7f4ab1753c90>
+- open: <Boost.Python.function object at 0x16aa86d0>
+- open_as_sequence: <Boost.Python.function object at 0x16a198a0>
+- open_container: <Boost.Python.function object at 0x1680cb80>
+- original_source_uid: <property object at 0x7f4ab1760180>
+- overwrite: <Boost.Python.function object at 0x16a4f300>
+- parent: <property object at 0x7f4ab1738ea0>
+- proxy_resolution: <property object at 0x7f4ab1753d30>
+- ratio: <property object at 0x7f4ab1753a60>
+- reformat: <Boost.Python.function object at 0x16a9df60>
+- render: <Boost.Python.function object at 0x167f8a00>
+- sample_rate: <property object at 0x7f4ab1760220>
+- save: <Boost.Python.function object at 0x1671bdf0>
+- scan_mode: <property object at 0x7f4ab1753b00>
+- source_uid: <property object at 0x7f4ab1760130>
+- start_frame: <property object at 0x7f4ab1760360>
+- subtitles: <property object at 0x7f4ab17537e0>
+- transfer_characteristics: <property object at 0x7f4ab1753bf0>
+- unlinked: <property object at 0x7f4ab1753ec0>
+- versions: <property object at 0x7f4ab17536f0>
+- width: <property object at 0x7f4ab1753880>
+Properties of PySequenceGroup:
+- add: <Boost.Python.function object at 0x16a8ef10>
+- attributes: <property object at 0x7f4ab1738e50>
+- parent: <property object at 0x7f4ab1738ea0>
+- remove: <Boost.Python.function object at 0x16a8ef60>
+- segments: <property object at 0x7f4ab17750d0>
+Properties of PySubtitleTrack:
+- attributes: <property object at 0x7f4ab1738e50>
+- copy_to_media_panel: <Boost.Python.function object at 0x16879d60>
+- cut: <Boost.Python.function object at 0x168314b0>
+- export_as_srt_file: <Boost.Python.function object at 0x16796e40>
+- insert_transition: <Boost.Python.function object at 0x16730ad0>
+- parent: <property object at 0x7f4ab1738ea0>
+- segments: <property object at 0x7f4ab1762660>
+- transitions: <property object at 0x7f4ab17626b0>
+Properties of PyTime:
+- frame: <property object at 0x7f4ac10271a0>
+- frame_rate: <property object at 0x7f4ab1739080>
+- relative_frame: <property object at 0x7f4ab19325c0>
+- timecode: <property object at 0x7f4ac0fc7240>
+Properties of PyTimeline:
+- clip: <property object at 0x7f4ab1750ae0>
+- current_effect: <property object at 0x7f4ab1750bd0>
+- current_marker: <property object at 0x7f4ab1750b80>
+- current_segment: <property object at 0x7f4ab1750b30>
+- current_transition: <property object at 0x7f4ab1750c20>
+- type: <property object at 0x7f4ab1750cc0>
+Properties of PyTimelineFX:
+- attributes: <property object at 0x7f4ab1738e50>
+- flush_maps_cache_media: <Boost.Python.function object at 0x16a8dae0>
+- has_maps_cache_media: <property object at 0x7f4ab1774a40>
+- load_setup: <Boost.Python.function object at 0x16a8d9e0>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_setup: <Boost.Python.function object at 0x16a8da60>
+- slide_keyframes: <Boost.Python.function object at 0x16a8dbe0>
+- sync_connected_segments: <Boost.Python.function object at 0x16a8db60>
+- type: <property object at 0x7f4ab17749f0>
+Properties of PyTrack:
+- attributes: <property object at 0x7f4ab1738e50>
+- copy_to_media_panel: <Boost.Python.function object at 0x16879d60>
+- cut: <Boost.Python.function object at 0x168314b0>
+- insert_transition: <Boost.Python.function object at 0x16730ad0>
+- parent: <property object at 0x7f4ab1738ea0>
+- segments: <property object at 0x7f4ab1762660>
+- transitions: <property object at 0x7f4ab17626b0>
+Properties of PyTransition:
+- attributes: <property object at 0x7f4ab1738e50>
+- in_offset: <property object at 0x7f4ab1762a20>
+- parent: <property object at 0x7f4ab1738ea0>
+- record_time: <property object at 0x7f4ab17629d0>
+- set_dissolve_to_from_colour: <Boost.Python.function object at 0x16a2c6d0>
+- set_fade_to_from_silence: <Boost.Python.function object at 0x16a2c7b0>
+- set_transition: <Boost.Python.function object at 0x16a2c550>
+- slide: <Boost.Python.function object at 0x16a2c610>
+- type: <property object at 0x7f4ab1762980>
+Properties of PyUser:
+- name: <property object at 0x7f4ab1750090>
+- nickname: <property object at 0x7f4ab17500e0>
+Properties of PyUsers:
+- current_user: <property object at 0x7f4ab1750180>
+Properties of PyVersion:
+- attributes: <property object at 0x7f4ab1738e50>
+- copy_to_media_panel: <Boost.Python.function object at 0x16a8fd20>
+- create_track: <Boost.Python.function object at 0x16a8fdc0>
+- import_DolbyVision_xml: <Boost.Python.function object at 0x16a8fe60>
+- parent: <property object at 0x7f4ab1738ea0>
+- stereo: <property object at 0x7f4ab17753f0>
+- tracks: <property object at 0x7f4ab17753a0>
+Properties of PyWorkspace:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_library: <Boost.Python.function object at 0x168cfd50>
+- desktop: <property object at 0x7f4ab17522f0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- libraries: <property object at 0x7f4ab1752390>
+- parent: <property object at 0x7f4ab1738ea0>
+- replace_desktop: <Boost.Python.function object at 0x168cfdd0>
+- set_desktop_reels: <Boost.Python.function object at 0x168cfe20>
+- set_freeform: <Boost.Python.function object at 0x168e12f0>
+Properties of PyWriteFileNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- channels: <property object at 0x7f4ab173bba0>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- get_resolved_media_path: <Boost.Python.function object at 0x16994a00>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_channel_name: <Boost.Python.function object at 0x167e20e0>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of BuiltinImporter:
+- _ORIGIN: built-in
+- create_module: <function BuiltinImporter.create_module at 0x7f4ac155eac0>
+- exec_module: <function BuiltinImporter.exec_module at 0x7f4ac155eb60>
+- find_module: <bound method BuiltinImporter.find_module of <class '_frozen_importlib.BuiltinImporter'>>
+- find_spec: <bound method BuiltinImporter.find_spec of <class '_frozen_importlib.BuiltinImporter'>>
+- get_code: <bound method BuiltinImporter.get_code of <class '_frozen_importlib.BuiltinImporter'>>
+- get_source: <bound method BuiltinImporter.get_source of <class '_frozen_importlib.BuiltinImporter'>>
+- is_package: <bound method BuiltinImporter.is_package of <class '_frozen_importlib.BuiltinImporter'>>
+- load_module: <bound method _load_module_shim of <class '_frozen_importlib.BuiltinImporter'>>
+- module_repr: <function BuiltinImporter.module_repr at 0x7f4ac155e8e0>
+Properties of PyActionFamilyNode:
+- all_tabs: <property object at 0x7f4ab173a070>
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_schematic: <Boost.Python.function object at 0x168d3950>
+- connect_nodes: <Boost.Python.function object at 0x168d37e0>
+- create_node: <Boost.Python.function object at 0x168d3670>
+- cursor_position: <property object at 0x7f4ab173a020>
+- delete: <Boost.Python.function object at 0x16948b70>
+- disconnect_nodes: <Boost.Python.function object at 0x168d3860>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- encompass_nodes: <Boost.Python.function object at 0x168d39d0>
+- get_node: <Boost.Python.function object at 0x168d3760>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- left_tabs: <property object at 0x7f4ab173a0c0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- media_layers: <property object at 0x7f4ab173a2a0>
+- node_types: <property object at 0x7f4ab1739f80>
+- nodes: <property object at 0x7f4ab1739fd0>
+- organize: <Boost.Python.function object at 0x168d36f0>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- right_tabs: <property object at 0x7f4ab173a110>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyActionNode:
+- add_media: <Boost.Python.function object at 0x16a41b20>
+- all_tabs: <property object at 0x7f4ab173a070>
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_schematic: <Boost.Python.function object at 0x168d3950>
+- connect_nodes: <Boost.Python.function object at 0x168d37e0>
+- create_node: <Boost.Python.function object at 0x168d3670>
+- cursor_position: <property object at 0x7f4ab173a020>
+- delete: <Boost.Python.function object at 0x16948b70>
+- disable_output: <Boost.Python.function object at 0x16a41ea0>
+- disconnect_nodes: <Boost.Python.function object at 0x168d3860>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- enable_output: <Boost.Python.function object at 0x16a41e20>
+- encompass_nodes: <Boost.Python.function object at 0x168d39d0>
+- export_fbx: <Boost.Python.function object at 0x16a41c20>
+- get_node: <Boost.Python.function object at 0x168d3760>
+- import_abc: <Boost.Python.function object at 0x16a41d20>
+- import_fbx: <Boost.Python.function object at 0x16a41ba0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- left_tabs: <property object at 0x7f4ab173a0c0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- media_layers: <property object at 0x7f4ab173a2a0>
+- media_nodes: <property object at 0x7f4ab173a7f0>
+- node_types: <property object at 0x7f4ab1739f80>
+- nodes: <property object at 0x7f4ab1739fd0>
+- organize: <Boost.Python.function object at 0x168d36f0>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- output_types: <property object at 0x7f4ab173ab60>
+- parent: <property object at 0x7f4ab1738ea0>
+- read_abc: <Boost.Python.function object at 0x16a41da0>
+- read_fbx: <Boost.Python.function object at 0x16a41ca0>
+- right_tabs: <property object at 0x7f4ab173a110>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyArchiveEntry:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+Properties of PyAttribute:
+- get_value: <Boost.Python.function object at 0x16a58730>
+- set_value: <Boost.Python.function object at 0x16a586e0>
+- values: <property object at 0x7f4ab1738fe0>
+Properties of PyAudioTrack:
+- attributes: <property object at 0x7f4ab1738e50>
+- channels: <property object at 0x7f4ab1775670>
+- copy_to_media_panel: <Boost.Python.function object at 0x16a90650>
+- parent: <property object at 0x7f4ab1738ea0>
+- stereo: <property object at 0x7f4ab17756c0>
+Properties of PyBatch:
+- append_setup: <Boost.Python.function object at 0x169045f0>
+- append_to_batch: <Boost.Python.function object at 0x16904af0>
+- append_to_setup: <Boost.Python.function object at 0x16904a70>
+- attributes: <property object at 0x7f4ab1738e50>
+- batch_iterations: <property object at 0x7f4ab17395d0>
+- clear: <Boost.Python.function object at 0x16904970>
+- clear_all_contexts: <Boost.Python.function object at 0x16935040>
+- clear_context: <Boost.Python.function object at 0x16903450>
+- clear_setup: <Boost.Python.function object at 0x167c0850>
+- close: <Boost.Python.function object at 0x169048f0>
+- connect_nodes: <Boost.Python.function object at 0x169032d0>
+- contexts: <property object at 0x7f4ab1739710>
+- create_batch_group: <Boost.Python.function object at 0x169046f0>
+- create_node: <Boost.Python.function object at 0x16903250>
+- create_reel: <Boost.Python.function object at 0x16904c70>
+- create_shelf_reel: <Boost.Python.function object at 0x16904cf0>
+- current_iteration: <property object at 0x7f4ab1739670>
+- current_iteration_number: <property object at 0x7f4ab1739800>
+- cursor_position: <property object at 0x7f4ab1739760>
+- disconnect_node: <Boost.Python.function object at 0x16903350>
+- encompass_nodes: <Boost.Python.function object at 0x16904770>
+- frame_all: <Boost.Python.function object at 0x169043f0>
+- frame_selected: <Boost.Python.function object at 0x16904370>
+- get_node: <Boost.Python.function object at 0x169031d0>
+- go_to: <Boost.Python.function object at 0x16904d70>
+- import_clip: <Boost.Python.function object at 0x16904470>
+- import_clips: <Boost.Python.function object at 0x169044f0>
+- iterate: <Boost.Python.function object at 0x167c08a0>
+- load_setup: <Boost.Python.function object at 0x167c64a0>
+- mimic_link: <Boost.Python.function object at 0x169033d0>
+- node_types: <property object at 0x7f4ab17394e0>
+- nodes: <property object at 0x7f4ab1739490>
+- open: <Boost.Python.function object at 0x16904870>
+- open_as_batch_group: <Boost.Python.function object at 0x16904b70>
+- opened: <property object at 0x7f4ab17397b0>
+- organize: <Boost.Python.function object at 0x167c6450>
+- parent: <property object at 0x7f4ab1738ea0>
+- reels: <property object at 0x7f4ab1739530>
+- render: <Boost.Python.function object at 0x16948b20>
+- replace_setup: <Boost.Python.function object at 0x16904bf0>
+- save: <Boost.Python.function object at 0x169049f0>
+- save_current_iteration: <Boost.Python.function object at 0x1699b8c0>
+- save_setup: <Boost.Python.function object at 0x16904570>
+- select_nodes: <Boost.Python.function object at 0x169047f0>
+- set_viewport_layout: <Boost.Python.function object at 0x16904670>
+- shelf_reels: <property object at 0x7f4ab1739580>
+Properties of PyBatchIteration:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- iteration_number: <property object at 0x7f4ab1e60f90>
+- open_as_batch_group: <Boost.Python.function object at 0x168116f0>
+- parent: <property object at 0x7f4ab1738ea0>
+Properties of PyBrowser:
+- bit_depth: <property object at 0x7f4ab1761c10>
+- colour_space: <property object at 0x7f4ab1761da0>
+- frame_ratio: <property object at 0x7f4ab1761c60>
+- height: <property object at 0x7f4ab1761b20>
+- resize_filter: <property object at 0x7f4ab1761ee0>
+- resize_mode: <property object at 0x7f4ab1761e40>
+- resolution: <property object at 0x7f4ab1761f30>
+- scaling_presets_value: <property object at 0x7f4ab1761b70>
+- scan_mode: <property object at 0x7f4ab1761d00>
+- selection: <property object at 0x7f4ab17619e0>
+- sequence_mode: <property object at 0x7f4ab1761a80>
+- show: <Boost.Python.function object at 0x16a3ac50>
+- width: <property object at 0x7f4ab1761ad0>
+Properties of PyClip:
+- archive_date: <property object at 0x7f4ab1753f60>
+- archive_error: <property object at 0x7f4ab1753fb0>
+- attributes: <property object at 0x7f4ab1738e50>
+- audio_tracks: <property object at 0x7f4ab1753740>
+- bit_depth: <property object at 0x7f4ab17539c0>
+- cache_media: <Boost.Python.function object at 0x169706a0>
+- cached: <property object at 0x7f4ab17602c0>
+- change_dominance: <Boost.Python.function object at 0x16970600>
+- change_start_frame: <Boost.Python.function object at 0x16743450>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- close_container: <Boost.Python.function object at 0x16a9dec0>
+- colour_primaries: <property object at 0x7f4ab1753b50>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_marker: <Boost.Python.function object at 0x16a9cd60>
+- creation_date: <property object at 0x7f4ab1753f10>
+- cut: <Boost.Python.function object at 0x1671be70>
+- duration: <property object at 0x7f4ab17536a0>
+- essence_uid: <property object at 0x7f4ab1760090>
+- flush_cache_media: <Boost.Python.function object at 0x16a5e6c0>
+- flush_renders: <Boost.Python.function object at 0x16710a70>
+- frame_rate: <property object at 0x7f4ab1753600>
+- get_colour_space: <Boost.Python.function object at 0x167433c0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- has_deliverables: <property object at 0x7f4ab1753dd0>
+- has_history: <property object at 0x7f4ab1753e70>
+- height: <property object at 0x7f4ab1753920>
+- is_rendered: <Boost.Python.function object at 0x16710ae0>
+- markers: <property object at 0x7f4ab1753790>
+- matrix_coefficients: <property object at 0x7f4ab1753c90>
+- open_as_sequence: <Boost.Python.function object at 0x16a198a0>
+- open_container: <Boost.Python.function object at 0x1680cb80>
+- original_source_uid: <property object at 0x7f4ab1760180>
+- parent: <property object at 0x7f4ab1738ea0>
+- proxy_resolution: <property object at 0x7f4ab1753d30>
+- ratio: <property object at 0x7f4ab1753a60>
+- reformat: <Boost.Python.function object at 0x16a9df60>
+- render: <Boost.Python.function object at 0x167f8a00>
+- sample_rate: <property object at 0x7f4ab1760220>
+- save: <Boost.Python.function object at 0x1671bdf0>
+- scan_mode: <property object at 0x7f4ab1753b00>
+- source_uid: <property object at 0x7f4ab1760130>
+- start_frame: <property object at 0x7f4ab1760360>
+- subtitles: <property object at 0x7f4ab17537e0>
+- transfer_characteristics: <property object at 0x7f4ab1753bf0>
+- unlinked: <property object at 0x7f4ab1753ec0>
+- versions: <property object at 0x7f4ab17536f0>
+- width: <property object at 0x7f4ab1753880>
+Properties of PyClipNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- clip: <property object at 0x7f4ab173ba60>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyCoCameraAnalysis:
+- add_reference: <Boost.Python.function object at 0x16af0b20>
+- analyseRange: <Boost.Python.function object at 0x16a30480>
+- assign_media: <Boost.Python.function object at 0x16af0a80>
+- attributes: <property object at 0x7f4ab1738e50>
+- cache_range: <Boost.Python.function object at 0x16af0ad0>
+- children: <Boost.Python.function object at 0x167f2630>
+- parent: <property object at 0x7f4ab1738ea0>
+- parents: <Boost.Python.function object at 0x167f25e0>
+- resetAnalysis: <Boost.Python.function object at 0x16a30430>
+- type: <property object at 0x7f4ab173a3e0>
+Properties of PyCoCompass:
+- add_reference: <Boost.Python.function object at 0x16af0b20>
+- assign_media: <Boost.Python.function object at 0x16af0a80>
+- attributes: <property object at 0x7f4ab1738e50>
+- cache_range: <Boost.Python.function object at 0x16af0ad0>
+- children: <Boost.Python.function object at 0x167f2630>
+- nodes: <property object at 0x7f4ab173a520>
+- parent: <property object at 0x7f4ab1738ea0>
+- parents: <Boost.Python.function object at 0x167f25e0>
+- type: <property object at 0x7f4ab173a3e0>
+Properties of PyCoNode:
+- add_reference: <Boost.Python.function object at 0x16af0b20>
+- assign_media: <Boost.Python.function object at 0x16af0a80>
+- attributes: <property object at 0x7f4ab1738e50>
+- cache_range: <Boost.Python.function object at 0x16af0ad0>
+- children: <Boost.Python.function object at 0x167f2630>
+- parent: <property object at 0x7f4ab1738ea0>
+- parents: <Boost.Python.function object at 0x167f25e0>
+- type: <property object at 0x7f4ab173a3e0>
+Properties of PyCompassNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- nodes: <property object at 0x7f4ab173b380>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyDesktop:
+- attributes: <property object at 0x7f4ab1738e50>
+- batch_groups: <property object at 0x7f4ab1752570>
+- children: <property object at 0x7f4ab1752520>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_batch_group: <Boost.Python.function object at 0x16a89610>
+- create_reel_group: <Boost.Python.function object at 0x16a89510>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- reel_groups: <property object at 0x7f4ab17525c0>
+- save: <Boost.Python.function object at 0x16a89590>
+Properties of PyExporter:
+- Audio: Audio
+- Autodesk: Autodesk
+- BackgroundJobSettings: <class 'flame.BackgroundJobSettings'>
+- Distribution_Package: Distribution_Package
+- Image_Sequence: Image_Sequence
+- Movie: Movie
+- PresetType: <class 'flame.PresetType'>
+- PresetVisibility: <class 'flame.PresetVisibility'>
+- Project: Project
+- Sequence_Publish: Sequence_Publish
+- Shared: Shared
+- Shotgun: Shotgun
+- User: User
+- export: <Boost.Python.function object at 0x168127a0>
+- export_all_subtitles: <property object at 0x7f4ab1760b30>
+- export_between_marks: <property object at 0x7f4ab1760900>
+- export_subtitles_as_files: <property object at 0x7f4ab1760a90>
+- foreground: <property object at 0x7f4ab17609a0>
+- get_presets_base_dir: <Boost.Python.function object at 0x168126c0>
+- get_presets_dir: <Boost.Python.function object at 0x16812730>
+- include_subtitles: <property object at 0x7f4ab17609f0>
+- keep_timeline_fx_renders: <property object at 0x7f4ab1760f90>
+- use_top_video_track: <property object at 0x7f4ab21fbd80>
+- warn_on_mixed_colour_space: <property object at 0x7f4ab1760e50>
+- warn_on_no_media: <property object at 0x7f4ab1760db0>
+- warn_on_pending_render: <property object at 0x7f4ab1760d10>
+- warn_on_reimport_unsupported: <property object at 0x7f4ab1760ef0>
+- warn_on_unlinked: <property object at 0x7f4ab1760bd0>
+- warn_on_unrendered: <property object at 0x7f4ab1760c70>
+Properties of PyFlameObject:
+- attributes: <property object at 0x7f4ab1738e50>
+- parent: <property object at 0x7f4ab1738ea0>
+Properties of PyFolder:
+- attributes: <property object at 0x7f4ab1738e50>
+- batch_groups: <property object at 0x7f4ab17533d0>
+- batch_iterations: <property object at 0x7f4ab1753240>
+- children: <property object at 0x7f4ab17531f0>
+- clear: <Boost.Python.function object at 0x16829470>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- clips: <property object at 0x7f4ab1753380>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_folder: <Boost.Python.function object at 0x168295f0>
+- create_reel: <Boost.Python.function object at 0x16829570>
+- create_reel_group: <Boost.Python.function object at 0x168294f0>
+- create_sequence: <Boost.Python.function object at 0x16829790>
+- desktops: <property object at 0x7f4ab1753290>
+- folders: <property object at 0x7f4ab21f8e50>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- reel_groups: <property object at 0x7f4ab17532e0>
+- reels: <property object at 0x7f4ab2469170>
+- sequences: <property object at 0x7f4ab1753330>
+Properties of PyGMaskTracerNode:
+- all_tabs: <property object at 0x7f4ab173a070>
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_schematic: <Boost.Python.function object at 0x168d3950>
+- connect_nodes: <Boost.Python.function object at 0x168d37e0>
+- create_node: <Boost.Python.function object at 0x168d3670>
+- cursor_position: <property object at 0x7f4ab173a020>
+- delete: <Boost.Python.function object at 0x16948b70>
+- disable_output: <Boost.Python.function object at 0x16a797c0>
+- disconnect_nodes: <Boost.Python.function object at 0x168d3860>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- enable_output: <Boost.Python.function object at 0x16a79740>
+- encompass_nodes: <Boost.Python.function object at 0x168d39d0>
+- export_fbx: <Boost.Python.function object at 0x16a79540>
+- get_node: <Boost.Python.function object at 0x168d3760>
+- import_abc: <Boost.Python.function object at 0x16a79640>
+- import_fbx: <Boost.Python.function object at 0x16a794c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- left_tabs: <property object at 0x7f4ab173a0c0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- media_layers: <property object at 0x7f4ab173a2a0>
+- node_types: <property object at 0x7f4ab1739f80>
+- nodes: <property object at 0x7f4ab1739fd0>
+- organize: <Boost.Python.function object at 0x168d36f0>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- output_types: <property object at 0x7f4ab219c180>
+- parent: <property object at 0x7f4ab1738ea0>
+- read_abc: <Boost.Python.function object at 0x16a796c0>
+- read_fbx: <Boost.Python.function object at 0x16a795c0>
+- right_tabs: <property object at 0x7f4ab173a110>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyHDRNode:
+- analysis_status: <property object at 0x7f4ab173b600>
+- analyze: <Boost.Python.function object at 0x16992150>
+- attributes: <property object at 0x7f4ab1738e50>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- export_DolbyVision_xml: <Boost.Python.function object at 0x16870290>
+- has_trim: <Boost.Python.function object at 0x1681cb00>
+- import_DolbyVision_xml: <Boost.Python.function object at 0x16870310>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- interpolate_trims: <Boost.Python.function object at 0x168611d0>
+- keep_analysis: <Boost.Python.function object at 0x169c61f0>
+- l2_from_l8: <Boost.Python.function object at 0x1681cb80>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- mastering_display_ids: <property object at 0x7f4ab173b740>
+- mastering_display_info: <property object at 0x7f4ab173b830>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- reset_analysis: <Boost.Python.function object at 0x169c6270>
+- reset_trims: <Boost.Python.function object at 0x16861250>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+- target_display_ids: <property object at 0x7f4ab1a4c6d0>
+- target_display_info: <property object at 0x7f4ab173b8d0>
+Properties of PyHDRTimelineFX:
+- analysis_status: <property object at 0x7f4ab1774c70>
+- analyze: <Boost.Python.function object at 0x16a8e320>
+- attributes: <property object at 0x7f4ab1738e50>
+- export_DolbyVision_xml: <Boost.Python.function object at 0x16a8e5a0>
+- flush_maps_cache_media: <Boost.Python.function object at 0x16a8dae0>
+- has_maps_cache_media: <property object at 0x7f4ab1774a40>
+- has_trim: <Boost.Python.function object at 0x16a8e7e0>
+- import_DolbyVision_xml: <Boost.Python.function object at 0x16a8e620>
+- interpolate_trims: <Boost.Python.function object at 0x16a8e4a0>
+- keep_analysis: <Boost.Python.function object at 0x16a8e3a0>
+- l2_from_l8: <Boost.Python.function object at 0x16a8e860>
+- load_setup: <Boost.Python.function object at 0x16a8d9e0>
+- mastering_display_ids: <property object at 0x7f4ab1774e50>
+- mastering_display_info: <property object at 0x7f4ab1774ef0>
+- parent: <property object at 0x7f4ab1738ea0>
+- reset_analysis: <Boost.Python.function object at 0x16a8e420>
+- reset_trims: <Boost.Python.function object at 0x16a8e520>
+- save_setup: <Boost.Python.function object at 0x16a8da60>
+- slide_keyframes: <Boost.Python.function object at 0x16a8dbe0>
+- sync_connected_segments: <Boost.Python.function object at 0x16a8db60>
+- target_display_ids: <property object at 0x7f4ab1774ea0>
+- target_display_info: <property object at 0x7f4ab1774f40>
+- type: <property object at 0x7f4ab17749f0>
+Properties of PyImageNode:
+- add_media: <Boost.Python.function object at 0x1674fc40>
+- all_tabs: <property object at 0x7f4ab173a070>
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_schematic: <Boost.Python.function object at 0x168d3950>
+- connect_nodes: <Boost.Python.function object at 0x168d37e0>
+- create_node: <Boost.Python.function object at 0x168d3670>
+- cursor_position: <property object at 0x7f4ab173a020>
+- delete: <Boost.Python.function object at 0x16948b70>
+- disconnect_nodes: <Boost.Python.function object at 0x168d3860>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- encompass_nodes: <Boost.Python.function object at 0x168d39d0>
+- get_node: <Boost.Python.function object at 0x168d3760>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- left_tabs: <property object at 0x7f4ab173a0c0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- media_layers: <property object at 0x7f4ab173a2a0>
+- media_nodes: <property object at 0x7f4ab173aca0>
+- node_types: <property object at 0x7f4ab1739f80>
+- nodes: <property object at 0x7f4ab1739fd0>
+- organize: <Boost.Python.function object at 0x168d36f0>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- right_tabs: <property object at 0x7f4ab173a110>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyLibrary:
+- acquire_exclusive_access: <Boost.Python.function object at 0x167b63b0>
+- attributes: <property object at 0x7f4ab1738e50>
+- batch_groups: <property object at 0x7f4ab1752a70>
+- batch_iterations: <property object at 0x7f4ab1752890>
+- children: <property object at 0x7f4ab17527f0>
+- clear: <Boost.Python.function object at 0x168e1340>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- clips: <property object at 0x7f4ab1752a20>
+- close: <Boost.Python.function object at 0x16a33e70>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_folder: <Boost.Python.function object at 0x16821910>
+- create_reel: <Boost.Python.function object at 0x16801a50>
+- create_reel_group: <Boost.Python.function object at 0x168019d0>
+- create_sequence: <Boost.Python.function object at 0x16929b50>
+- desktops: <property object at 0x7f4ab17528e0>
+- folders: <property object at 0x7f4ab1752840>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- open: <Boost.Python.function object at 0x16a33df0>
+- opened: <property object at 0x7f4ab1752ac0>
+- parent: <property object at 0x7f4ab1738ea0>
+- reel_groups: <property object at 0x7f4ab1752930>
+- reels: <property object at 0x7f4ab1752980>
+- release_exclusive_access: <Boost.Python.function object at 0x167b6430>
+- sequences: <property object at 0x7f4ab17529d0>
+Properties of PyMarker:
+- attributes: <property object at 0x7f4ab1738e50>
+- parent: <property object at 0x7f4ab1738ea0>
+Properties of PyMediaHub:
+- archives: <property object at 0x7f4ab1751a30>
+- files: <property object at 0x7f4ab17519e0>
+Properties of PyMediaHubFilesEntry:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- path: <property object at 0x7f4ab1775c10>
+Properties of PyMediaHubFilesFolder:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- path: <property object at 0x7f4ab1775df0>
+Properties of PyMediaHubFilesTab:
+- get_path: <Boost.Python.function object at 0x16a49cf0>
+- options: <property object at 0x7f4ab17511c0>
+- set_path: <Boost.Python.function object at 0x16a49d60>
+Properties of PyMediaHubFilesTabOptions:
+- bit_depth: <property object at 0x7f4ab1751800>
+- cache_and_proxies_all_versions: <property object at 0x7f4ab1751530>
+- cache_mode: <property object at 0x7f4ab1751440>
+- frame_ratio: <property object at 0x7f4ab17517b0>
+- height: <property object at 0x7f4ab19d2430>
+- multi_channel_mode: <property object at 0x7f4ab1751350>
+- pixel_ratio: <property object at 0x7f4ab17518a0>
+- proxies_mode: <property object at 0x7f4ab17514e0>
+- resize_filter: <property object at 0x7f4ab1751620>
+- resize_mode: <property object at 0x7f4ab17515d0>
+- resolution: <property object at 0x7f4ab1751670>
+- scaling_presets_value: <property object at 0x7f4ab1751710>
+- scan_mode: <property object at 0x7f4ab1751850>
+- sequence_mode: <property object at 0x7f4ab17513f0>
+- set_tagged_colour_space: <Boost.Python.function object at 0x1684ea10>
+- width: <property object at 0x7f4ab17516c0>
+Properties of PyMediaHubProjectsEntry:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- path: <property object at 0x7f4ab1776070>
+- uid: <property object at 0x7f4ab1775fd0>
+Properties of PyMediaHubProjectsFolder:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- path: <property object at 0x7f4ab17762f0>
+- uid: <property object at 0x7f4ab1776250>
+Properties of PyMediaHubTab:
+- get_path: <Boost.Python.function object at 0x16a49cf0>
+- set_path: <Boost.Python.function object at 0x16a49d60>
+Properties of PyMediaPanel:
+- copy: <Boost.Python.function object at 0x1684e9c0>
+- dual: <property object at 0x7f4ab17508b0>
+- full_height: <property object at 0x7f4ab1750810>
+- full_width: <property object at 0x7f4ab1750860>
+- move: <Boost.Python.function object at 0x1684e970>
+- selected_entries: <property object at 0x7f4ab1750770>
+- visible: <property object at 0x7f4ab17507c0>
+Properties of PyMessages:
+- clear_console: <Boost.Python.function object at 0x16714430>
+- show_in_console: <Boost.Python.function object at 0x1675f050>
+- show_in_dialog: <Boost.Python.function object at 0x16714480>
+Properties of PyNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyOFXNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- change_plugin: <Boost.Python.function object at 0x16a79e40>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyPaintNode:
+- add_source: <Boost.Python.function object at 0x1674fcb0>
+- attributes: <property object at 0x7f4ab1738e50>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyProject:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_shared_library: <Boost.Python.function object at 0x1676ce60>
+- current_workspace: <property object at 0x7f4ab1751fd0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- name: <property object at 0x7f4ab1751da0>
+- nickname: <property object at 0x7f4ab1751e40>
+- parent: <property object at 0x7f4ab1738ea0>
+- project_name: <property object at 0x7f4ab1751ee0>
+- refresh_shared_libraries: <Boost.Python.function object at 0x16991120>
+- shared_libraries: <property object at 0x7f4ab1752070>
+- workspaces_count: <property object at 0x7f4ab1751f30>
+Properties of PyProjectSelector:
+- current_project: <property object at 0x7f4ab173bf10>
+Properties of PyReel:
+- attributes: <property object at 0x7f4ab1738e50>
+- children: <property object at 0x7f4ab1752f20>
+- clear: <Boost.Python.function object at 0x16965dc0>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- clips: <property object at 0x7f4ab1752fc0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_sequence: <Boost.Python.function object at 0x16929bd0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- save: <Boost.Python.function object at 0x16925c80>
+- sequences: <property object at 0x7f4ab1752f70>
+- type: <property object at 0x7f4ab1753010>
+Properties of PyReelGroup:
+- attributes: <property object at 0x7f4ab1738e50>
+- children: <property object at 0x7f4ab1752d40>
+- clear: <Boost.Python.function object at 0x16965450>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_reel: <Boost.Python.function object at 0x169654d0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- reels: <property object at 0x7f4ab1752d90>
+- save: <Boost.Python.function object at 0x16965550>
+Properties of PyRenderNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- channels: <property object at 0x7f4ab173bba0>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_channel_name: <Boost.Python.function object at 0x167e20e0>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of PyResolution:
+- bit_depth: <property object at 0x7f4ab1ebaac0>
+- frame_ratio: <property object at 0x7f4ab17392b0>
+- height: <property object at 0x7f4ab1739260>
+- resolution: <property object at 0x7f4ab1739120>
+- scan_mode: <property object at 0x7f4ab1739300>
+- width: <property object at 0x7f4ab17391c0>
+Properties of PySearch:
+- activate_search_result: <Boost.Python.function object at 0x16a49790>
+- search_results: <Boost.Python.function object at 0x16a49720>
+- set_tool_favorite: <Boost.Python.function object at 0x16a495d0>
+- set_tool_hidden: <Boost.Python.function object at 0x16a49640>
+- set_tool_weight: <Boost.Python.function object at 0x16a496b0>
+- use_weight: <property object at 0x7f4ab1750db0>
+Properties of PySegment:
+- attributes: <property object at 0x7f4ab1738e50>
+- change_start_frame: <Boost.Python.function object at 0x167771b0>
+- clear_colour: <Boost.Python.function object at 0x167275c0>
+- connected_segments: <Boost.Python.function object at 0x1675b210>
+- container_clip: <property object at 0x7f4ab1763e70>
+- copy_to_media_panel: <Boost.Python.function object at 0x1675b030>
+- create_connection: <Boost.Python.function object at 0x16996ee0>
+- create_effect: <Boost.Python.function object at 0x1678fd50>
+- create_marker: <Boost.Python.function object at 0x16996e00>
+- create_unlinked_segment: <Boost.Python.function object at 0x167770f0>
+- duplicate_source: <Boost.Python.function object at 0x1675b2d0>
+- effect_types: <property object at 0x7f4ab1763a10>
+- effects: <property object at 0x7f4ab1763a60>
+- file_path: <property object at 0x7f4ab1763970>
+- get_colour_space: <Boost.Python.function object at 0x16726a20>
+- groups: <property object at 0x7f4ab1763ab0>
+- head: <property object at 0x7f4ab1763ba0>
+- markers: <property object at 0x7f4ab17639c0>
+- match: <Boost.Python.function object at 0x16727500>
+- matte_channel: <property object at 0x7f4ab1763c90>
+- matte_channels: <property object at 0x7f4ab1763d30>
+- matte_mode: <property object at 0x7f4ab1763dd0>
+- original_source_uid: <property object at 0x7f4ab185da30>
+- parent: <property object at 0x7f4ab1738ea0>
+- record_duration: <property object at 0x7f4ab17638d0>
+- record_in: <property object at 0x7f4ab1763830>
+- record_out: <property object at 0x7f4ab1763880>
+- remove_connection: <Boost.Python.function object at 0x167bfe80>
+- rgb_channel: <property object at 0x7f4ab1763c40>
+- rgb_channels: <property object at 0x7f4ab1763ce0>
+- set_gap_bars: <Boost.Python.function object at 0x168fca50>
+- set_gap_colour: <Boost.Python.function object at 0x16957d70>
+- set_matte_channel: <Boost.Python.function object at 0x167269a0>
+- set_rgb_channel: <Boost.Python.function object at 0x1673c9c0>
+- shared_source_segments: <Boost.Python.function object at 0x1675af90>
+- slide_keyframes: <Boost.Python.function object at 0x16957cd0>
+- slip: <Boost.Python.function object at 0x16a24d40>
+- smart_replace: <Boost.Python.function object at 0x16816140>
+- smart_replace_media: <Boost.Python.function object at 0x168161d0>
+- source_audio_track: <property object at 0x7f4ab17633d0>
+- source_bit_depth: <property object at 0x7f4ab1762fc0>
+- source_cached: <property object at 0x7f4ab17631f0>
+- source_colour_primaries: <property object at 0x7f4ab1763600>
+- source_duration: <property object at 0x7f4ab1762de0>
+- source_essence_uid: <property object at 0x7f4ab17634c0>
+- source_has_history: <property object at 0x7f4ab1763240>
+- source_height: <property object at 0x7f4ab1762f20>
+- source_in: <property object at 0x7f4ab1762d40>
+- source_matrix_coefficients: <property object at 0x7f4ab1763740>
+- source_name: <property object at 0x7f4ab1762cf0>
+- source_out: <property object at 0x7f4ab1762d90>
+- source_ratio: <property object at 0x7f4ab17630b0>
+- source_sample_rate: <property object at 0x7f4ab1763330>
+- source_scan_mode: <property object at 0x7f4ab1763150>
+- source_transfer_characteristics: <property object at 0x7f4ab17636a0>
+- source_uid: <property object at 0x7f4ab17635b0>
+- source_unlinked: <property object at 0x7f4ab17632e0>
+- source_width: <property object at 0x7f4ab1762e80>
+- start_frame: <property object at 0x7f4ab1763920>
+- sync_connected_segments: <Boost.Python.function object at 0x167bff40>
+- tail: <property object at 0x7f4ab1763bf0>
+- tape_name: <property object at 0x7f4ab17637e0>
+- trim_head: <Boost.Python.function object at 0x16920dd0>
+- trim_tail: <Boost.Python.function object at 0x16a24cb0>
+- type: <property object at 0x7f4ab1763b50>
+Properties of PySequence:
+- archive_date: <property object at 0x7f4ab1753f60>
+- archive_error: <property object at 0x7f4ab1753fb0>
+- attributes: <property object at 0x7f4ab1738e50>
+- audio_tracks: <property object at 0x7f4ab1753740>
+- bit_depth: <property object at 0x7f4ab17539c0>
+- cache_media: <Boost.Python.function object at 0x169706a0>
+- cached: <property object at 0x7f4ab17602c0>
+- change_dominance: <Boost.Python.function object at 0x16970600>
+- change_start_frame: <Boost.Python.function object at 0x16743450>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- close_container: <Boost.Python.function object at 0x16a9dec0>
+- colour_primaries: <property object at 0x7f4ab1753b50>
+- commit: <Boost.Python.function object at 0x16961060>
+- copy_selection_to_media_panel: <Boost.Python.function object at 0x16a4f3c0>
+- create_audio: <Boost.Python.function object at 0x169e8110>
+- create_container: <Boost.Python.function object at 0x16aa8790>
+- create_group: <Boost.Python.function object at 0x157582f0>
+- create_marker: <Boost.Python.function object at 0x16a9cd60>
+- create_subtitle: <Boost.Python.function object at 0x169e81f0>
+- create_version: <Boost.Python.function object at 0x169ede90>
+- creation_date: <property object at 0x7f4ab1753f10>
+- cut: <Boost.Python.function object at 0x1671be70>
+- duration: <property object at 0x7f4ab17536a0>
+- essence_uid: <property object at 0x7f4ab1760090>
+- extract_selection_to_media_panel: <Boost.Python.function object at 0x16a5af90>
+- flush_cache_media: <Boost.Python.function object at 0x16a5e6c0>
+- flush_renders: <Boost.Python.function object at 0x16710a70>
+- frame_rate: <property object at 0x7f4ab1753600>
+- get_colour_space: <Boost.Python.function object at 0x167433c0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- groups: <property object at 0x7f4ab17624d0>
+- has_deliverables: <property object at 0x7f4ab1753dd0>
+- has_history: <property object at 0x7f4ab1753e70>
+- height: <property object at 0x7f4ab1753920>
+- import_subtitles_file: <Boost.Python.function object at 0x15758250>
+- insert: <Boost.Python.function object at 0x16a4b460>
+- is_rendered: <Boost.Python.function object at 0x16710ae0>
+- lift_selection_to_media_panel: <Boost.Python.function object at 0x16831410>
+- markers: <property object at 0x7f4ab1753790>
+- matrix_coefficients: <property object at 0x7f4ab1753c90>
+- open: <Boost.Python.function object at 0x16aa86d0>
+- open_as_sequence: <Boost.Python.function object at 0x16a198a0>
+- open_container: <Boost.Python.function object at 0x1680cb80>
+- original_source_uid: <property object at 0x7f4ab1760180>
+- overwrite: <Boost.Python.function object at 0x16a4f300>
+- parent: <property object at 0x7f4ab1738ea0>
+- proxy_resolution: <property object at 0x7f4ab1753d30>
+- ratio: <property object at 0x7f4ab1753a60>
+- reformat: <Boost.Python.function object at 0x16a9df60>
+- render: <Boost.Python.function object at 0x167f8a00>
+- sample_rate: <property object at 0x7f4ab1760220>
+- save: <Boost.Python.function object at 0x1671bdf0>
+- scan_mode: <property object at 0x7f4ab1753b00>
+- source_uid: <property object at 0x7f4ab1760130>
+- start_frame: <property object at 0x7f4ab1760360>
+- subtitles: <property object at 0x7f4ab17537e0>
+- transfer_characteristics: <property object at 0x7f4ab1753bf0>
+- unlinked: <property object at 0x7f4ab1753ec0>
+- versions: <property object at 0x7f4ab17536f0>
+- width: <property object at 0x7f4ab1753880>
+Properties of PySequenceGroup:
+- add: <Boost.Python.function object at 0x16a8ef10>
+- attributes: <property object at 0x7f4ab1738e50>
+- parent: <property object at 0x7f4ab1738ea0>
+- remove: <Boost.Python.function object at 0x16a8ef60>
+- segments: <property object at 0x7f4ab17750d0>
+Properties of PySubtitleTrack:
+- attributes: <property object at 0x7f4ab1738e50>
+- copy_to_media_panel: <Boost.Python.function object at 0x16879d60>
+- cut: <Boost.Python.function object at 0x168314b0>
+- export_as_srt_file: <Boost.Python.function object at 0x16796e40>
+- insert_transition: <Boost.Python.function object at 0x16730ad0>
+- parent: <property object at 0x7f4ab1738ea0>
+- segments: <property object at 0x7f4ab1762660>
+- transitions: <property object at 0x7f4ab17626b0>
+Properties of PyTime:
+- frame: <property object at 0x7f4ac10271a0>
+- frame_rate: <property object at 0x7f4ab1739080>
+- relative_frame: <property object at 0x7f4ab19325c0>
+- timecode: <property object at 0x7f4ac0fc7240>
+Properties of PyTimeline:
+- clip: <property object at 0x7f4ab1750ae0>
+- current_effect: <property object at 0x7f4ab1750bd0>
+- current_marker: <property object at 0x7f4ab1750b80>
+- current_segment: <property object at 0x7f4ab1750b30>
+- current_transition: <property object at 0x7f4ab1750c20>
+- type: <property object at 0x7f4ab1750cc0>
+Properties of PyTimelineFX:
+- attributes: <property object at 0x7f4ab1738e50>
+- flush_maps_cache_media: <Boost.Python.function object at 0x16a8dae0>
+- has_maps_cache_media: <property object at 0x7f4ab1774a40>
+- load_setup: <Boost.Python.function object at 0x16a8d9e0>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_setup: <Boost.Python.function object at 0x16a8da60>
+- slide_keyframes: <Boost.Python.function object at 0x16a8dbe0>
+- sync_connected_segments: <Boost.Python.function object at 0x16a8db60>
+- type: <property object at 0x7f4ab17749f0>
+Properties of PyTrack:
+- attributes: <property object at 0x7f4ab1738e50>
+- copy_to_media_panel: <Boost.Python.function object at 0x16879d60>
+- cut: <Boost.Python.function object at 0x168314b0>
+- insert_transition: <Boost.Python.function object at 0x16730ad0>
+- parent: <property object at 0x7f4ab1738ea0>
+- segments: <property object at 0x7f4ab1762660>
+- transitions: <property object at 0x7f4ab17626b0>
+Properties of PyTransition:
+- attributes: <property object at 0x7f4ab1738e50>
+- in_offset: <property object at 0x7f4ab1762a20>
+- parent: <property object at 0x7f4ab1738ea0>
+- record_time: <property object at 0x7f4ab17629d0>
+- set_dissolve_to_from_colour: <Boost.Python.function object at 0x16a2c6d0>
+- set_fade_to_from_silence: <Boost.Python.function object at 0x16a2c7b0>
+- set_transition: <Boost.Python.function object at 0x16a2c550>
+- slide: <Boost.Python.function object at 0x16a2c610>
+- type: <property object at 0x7f4ab1762980>
+Properties of PyUser:
+- name: <property object at 0x7f4ab1750090>
+- nickname: <property object at 0x7f4ab17500e0>
+Properties of PyUsers:
+- current_user: <property object at 0x7f4ab1750180>
+Properties of PyVersion:
+- attributes: <property object at 0x7f4ab1738e50>
+- copy_to_media_panel: <Boost.Python.function object at 0x16a8fd20>
+- create_track: <Boost.Python.function object at 0x16a8fdc0>
+- import_DolbyVision_xml: <Boost.Python.function object at 0x16a8fe60>
+- parent: <property object at 0x7f4ab1738ea0>
+- stereo: <property object at 0x7f4ab17753f0>
+- tracks: <property object at 0x7f4ab17753a0>
+Properties of PyWorkspace:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_library: <Boost.Python.function object at 0x168cfd50>
+- desktop: <property object at 0x7f4ab17522f0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- libraries: <property object at 0x7f4ab1752390>
+- parent: <property object at 0x7f4ab1738ea0>
+- replace_desktop: <Boost.Python.function object at 0x168cfdd0>
+- set_desktop_reels: <Boost.Python.function object at 0x168cfe20>
+- set_freeform: <Boost.Python.function object at 0x168e12f0>
+Properties of PyWriteFileNode:
+- attributes: <property object at 0x7f4ab1738e50>
+- channels: <property object at 0x7f4ab173bba0>
+- delete: <Boost.Python.function object at 0x16948b70>
+- duplicate: <Boost.Python.function object at 0x168020c0>
+- get_resolved_media_path: <Boost.Python.function object at 0x16994a00>
+- input_sockets: <property object at 0x7f4ab1739cb0>
+- load_node_setup: <Boost.Python.function object at 0x167dfe90>
+- output_sockets: <property object at 0x7f4ab1739d00>
+- parent: <property object at 0x7f4ab1738ea0>
+- save_node_setup: <Boost.Python.function object at 0x167dff10>
+- set_channel_name: <Boost.Python.function object at 0x167e20e0>
+- set_context: <Boost.Python.function object at 0x16802110>
+- sockets: <property object at 0x7f4ab1739c60>
+Properties of BuiltinImporter:
+- _ORIGIN: built-in
+- create_module: <function BuiltinImporter.create_module at 0x7f4ac155eac0>
+- exec_module: <function BuiltinImporter.exec_module at 0x7f4ac155eb60>
+- find_module: <bound method BuiltinImporter.find_module of <class '_frozen_importlib.BuiltinImporter'>>
+- find_spec: <bound method BuiltinImporter.find_spec of <class '_frozen_importlib.BuiltinImporter'>>
+- get_code: <bound method BuiltinImporter.get_code of <class '_frozen_importlib.BuiltinImporter'>>
+- get_source: <bound method BuiltinImporter.get_source of <class '_frozen_importlib.BuiltinImporter'>>
+- is_package: <bound method BuiltinImporter.is_package of <class '_frozen_importlib.BuiltinImporter'>>
+- load_module: <bound method _load_module_shim of <class '_frozen_importlib.BuiltinImporter'>>
+- module_repr: <function BuiltinImporter.module_repr at 0x7f4ac155e8e0>
+Properties of delete:
+Properties of duplicate:
+Properties of duplicate_many:
+Properties of execute_command:
+Properties of execute_shortcut:
+Properties of exit:
+Properties of find_by_name:
+Properties of find_by_uid:
+Properties of find_by_wiretap_node_id:
+Properties of get_current_tab:
+Properties of get_home_directory:
+Properties of get_init_cfg_path:
+Properties of get_version:
+Properties of get_version_major:
+Properties of get_version_minor:
+Properties of get_version_patch:
+Properties of get_version_stamp:
+Properties of go_to:
+Properties of import_clips:
+Properties of schedule_idle_event:
+Properties of set_current_tab:
+Properties of set_render_option:

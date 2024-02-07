@@ -1,0 +1,75 @@
+[pman@maico gather_and_deploy]$ sudo ~/gather_and_deploy/01-gather-files.sh
+[sudo] password for pman:
+
++++ dirname ~/gather_and_deploy/01-gather-files.sh
+
+++ cd /home/pman/workspace/BitBucket/scripts-and-programs/utilities/building_blocks/gather_and_deploy
+
+++ pwd
+
++ path_to_here=/home/pman/workspace/BitBucket/scripts-and-programs/utilities/building_blocks/gather_and_deploy
+
+++ date +%F_%H-%M
+
++ today_now=2023-05-27_16-39
+
++ source_directory=/var/tmp/source_folder
+
++ target_directory=/var/tmp/target_folder
+
++ source_file=original_source_file.txt
+
++ target_file=/var/tmp/target_folder/some_target_file
+
++ cp -v /var/tmp/source_folder/original_source_file.txt /var/tmp/source_folder/original_source_file.txt.2023-05-27_16-39.bak.maico
+‘/var/tmp/source_folder/original_source_file.txt’ -> ‘/var/tmp/source_folder/original_source_file.txt.2023-05-27_16-39.bak.maico’
+
++ echo '/var/tmp/source_folder/original_source_file.txt has been safely backed up'
+/var/tmp/source_folder/original_source_file.txt has been safely backed up
+
++ backup_name=original_source_file.txt.2023-05-27_16-39.bak.maico
+
++ backup_parent=~/gather_and_deploy/file_backups
+
++ backup_directory=~/gather_and_deploy/file_backups/maico
+
++ test -d ~/gather_and_deploy/file_backups/maico
+
++ backup_ALL_path=~/gather_and_deploy/file_backups/ALL
+
++ test -d ~/gather_and_deploy/file_backups/ALL
+
++ backup_file=~/gather_and_deploy/file_backups/maico/original_source_file.txt.2023-05-27_16-39.bak.maico
+
++ hard_linked_backup_file=~/gather_and_deploy/file_backups/ALL/original_source_file.txt.2023-05-27_16-39.bak.maico
+
++ cp -v /var/tmp/source_folder/original_source_file.txt \
+~/gather_and_deploy/file_backups/maico/original_source_file.txt.2023-05-27_16-39.bak.maico
+
+‘/var/tmp/source_folder/original_source_file.txt’ -> ‘~/gather_and_deploy/file_backups/maico/original_source_file.txt.2023-05-27_16-39.bak.maico’
+
++ ln ~/gather_and_deploy/file_backups/maico/original_source_file.txt.2023-05-27_16-39.bak.maico ~/gather_and_deploy/file_backups/ALL/original_source_file.txt.2023-05-27_16-39.bak.maico
+
++ modifications_name=original_source_file.txt.modifications.2023-05-27_16-39-maico
+
++ modifications_parent=~/gather_and_deploy/file_modifications
+
++ modifications_directory=~/gather_and_deploy/file_modifications/maico
+
++ test -d ~/gather_and_deploy/file_modifications/maico
+
++ modifications_ALL=~/gather_and_deploy/file_modifications/ALL
+
++ test -d ~/gather_and_deploy/file_modifications/ALL
+
++ modifications_file=~/gather_and_deploy/file_modifications/maico/original_source_file.txt.modifications.2023-05-27_16-39-maico
+
++ hard_linked_modifications_file=~/gather_and_deploy/file_modifications/ALL/original_source_file.txt.modifications.2023-05-27_16-39-maico
+
++ cp -v /var/tmp/source_folder/original_source_file.txt ~/gather_and_deploy/file_modifications/maico/original_source_file.txt.modifications.2023-05-27_16-39-maico
+‘/var/tmp/source_folder/original_source_file.txt’ -> ‘~/gather_and_deploy/file_modifications/maico/original_source_file.txt.modifications.2023-05-27_16-39-maico’
+
++ ln ~/gather_and_deploy/file_modifications/maico/original_source_file.txt.modifications.2023-05-27_16-39-maico ~/gather_and_deploy/file_modifications/ALL/original_source_file.txt.modifications.2023-05-27_16-39-maico
+
++ echo 'original_source_file.txt backed up to scripts-and-programs repo'
+original_source_file.txt backed up to scripts-and-programs repo

@@ -1,0 +1,28 @@
+{
+    "NodeBin": [
+        {
+            "NodeLine": [
+                {
+                    "NodeType": "Custom",
+                    "Setup": "Sony_Cine_709_ROUNDTRIP"
+                },
+                {
+                    "NodeType": "Custom",
+                    "Setup": "Sony_LCA_709_ROUNDTRIP"
+                }
+            ]
+        },
+        {
+            "NodeLine": [
+                {
+                    "NodeType": "Custom",
+                    "Setup": "Sony_LC_709_ROUNDTRIP"
+                },
+                {
+                    "NodeType": "Custom",
+                    "Setup": "Sony_SLog2_709_ROUNDTRIP"
+                }
+            ]
+        }
+    ]
+}

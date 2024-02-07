@@ -1,0 +1,98 @@
+Properties of PyProject:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_shared_library: <Boost.Python.function object at 0x1676ce60>
+- current_workspace: <property object at 0x7f4ab1751fd0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- name: <property object at 0x7f4ab1751da0>
+- nickname: <property object at 0x7f4ab1751e40>
+- parent: <property object at 0x7f4ab1738ea0>
+- project_name: <property object at 0x7f4ab1751ee0>
+- refresh_shared_libraries: <Boost.Python.function object at 0x16991120>
+- shared_libraries: <property object at 0x7f4ab1752070>
+- workspaces_count: <property object at 0x7f4ab1751f30>
+
+Properties of PyWorkspace:
+- attributes: <property object at 0x7f4ab1738e50>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_library: <Boost.Python.function object at 0x168cfd50>
+- desktop: <property object at 0x7f4ab17522f0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- libraries: <property object at 0x7f4ab1752390>
+- parent: <property object at 0x7f4ab1738ea0>
+- replace_desktop: <Boost.Python.function object at 0x168cfdd0>
+- set_desktop_reels: <Boost.Python.function object at 0x168cfe20>
+- set_freeform: <Boost.Python.function object at 0x168e12f0>
+
+Properties of PyLibrary:
+- acquire_exclusive_access: <Boost.Python.function object at 0x167b63b0>
+- attributes: <property object at 0x7f4ab1738e50>
+- batch_groups: <property object at 0x7f4ab1752a70>
+- batch_iterations: <property object at 0x7f4ab1752890>
+- children: <property object at 0x7f4ab17527f0>
+- clear: <Boost.Python.function object at 0x168e1340>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- clips: <property object at 0x7f4ab1752a20>
+- close: <Boost.Python.function object at 0x16a33e70>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_folder: <Boost.Python.function object at 0x16821910>
+- create_reel: <Boost.Python.function object at 0x16801a50>
+- create_reel_group: <Boost.Python.function object at 0x168019d0>
+- create_sequence: <Boost.Python.function object at 0x16929b50>
+- desktops: <property object at 0x7f4ab17528e0>
+- folders: <property object at 0x7f4ab1752840>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- open: <Boost.Python.function object at 0x16a33df0>
+- opened: <property object at 0x7f4ab1752ac0>
+- parent: <property object at 0x7f4ab1738ea0>
+- reel_groups: <property object at 0x7f4ab1752930>
+- reels: <property object at 0x7f4ab1752980>
+- release_exclusive_access: <Boost.Python.function object at 0x167b6430>
+- sequences: <property object at 0x7f4ab17529d0>
+
+Properties of PyDesktop:
+- attributes: <property object at 0x7f4ab1738e50>
+- batch_groups: <property object at 0x7f4ab1752570>
+- children: <property object at 0x7f4ab1752520>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_batch_group: <Boost.Python.function object at 0x16a89610>
+- create_reel_group: <Boost.Python.function object at 0x16a89510>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- reel_groups: <property object at 0x7f4ab17525c0>
+- save: <Boost.Python.function object at 0x16a89590>
+
+Properties of PyReelGroup:
+- attributes: <property object at 0x7f4ab1738e50>
+- children: <property object at 0x7f4ab1752d40>
+- clear: <Boost.Python.function object at 0x16965450>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_reel: <Boost.Python.function object at 0x169654d0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- reels: <property object at 0x7f4ab1752d90>
+- save: <Boost.Python.function object at 0x16965550>
+
+Properties of PyReel:
+- attributes: <property object at 0x7f4ab1738e50>
+- children: <property object at 0x7f4ab1752f20>
+- clear: <Boost.Python.function object at 0x16965dc0>
+- clear_colour: <Boost.Python.function object at 0x169610d0>
+- clips: <property object at 0x7f4ab1752fc0>
+- commit: <Boost.Python.function object at 0x16961060>
+- create_sequence: <Boost.Python.function object at 0x16929bd0>
+- get_wiretap_node_id: <Boost.Python.function object at 0x16960fe0>
+- get_wiretap_storage_id: <Boost.Python.function object at 0x16960f70>
+- parent: <property object at 0x7f4ab1738ea0>
+- save: <Boost.Python.function object at 0x16925c80>
+- sequences: <property object at 0x7f4ab1752f70>
+- type: <property object at 0x7f4ab1753010>

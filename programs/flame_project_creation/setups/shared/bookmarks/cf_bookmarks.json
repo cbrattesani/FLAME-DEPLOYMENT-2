@@ -1,0 +1,22 @@
+{
+    "DlBookmark": {
+        "Version": 1,
+        "Sections": [
+            {
+                "Section": "Shared",
+                "Bookmarks": [
+                    {
+                        "Bookmark": "JOBS",
+                        "Path": "/JOBS/",
+                        "Visibility": "Global"
+                    },
+                    {
+                        "Bookmark": "flame_colortoolkit",
+                        "Path": "/opt/Autodesk/Synergy/SynColor/Shared/transforms/flame_colortoolkit",
+                        "Visibility": "Global"
+                    }
+                ]
+            }
+        ]
+    }
+}
